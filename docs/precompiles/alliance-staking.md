@@ -6,16 +6,16 @@
 pragma solidity ^0.8.12;
 
 struct Coin {
-address token;
-uint256 amount;
+    address token;
+    uint256 amount;
 }
 
 interface AllianceStaking {
-function delegation(
-address _validator,
-address _delegator,
-address _token
-) external view returns (uint256 amount);
+    function delegation(
+        address _validator,
+        address _delegator,
+        address _token
+    ) external view returns (uint256 amount);
 
     function delegate(
         address _validator,
