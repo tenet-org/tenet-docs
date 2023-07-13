@@ -4,6 +4,28 @@
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
+
+function defineSection(section, options = {}) {
+  return [
+    '@docusaurus/plugin-content-docs',
+    /** @type {import('@docusaurus/plugin-content-docs').Options} */
+    ({
+      path: `docs/${section}`,
+      routeBasePath: section,
+      id: section,
+      sidebarPath: require.resolve('./sidebars.js'),
+      breadcrumbs: true,
+      editUrl: 'https://github.com/tenet-org/tenet-docs/tree/main/',
+      ...options,
+    }),
+  ];
+}
+
+const SECTIONS = [
+  defineSection('node'),
+  defineSection('bridge'),
+];
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Tenet Docs',
@@ -32,25 +54,21 @@ const config = {
     locales: ['en'],
   },
 
+  plugins: [
+      ...SECTIONS
+  ],
+
   presets: [
     [
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          path: 'docs/home',
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          breadcrumbs: true,
         },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
+        blog: false,
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -62,21 +80,24 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      // image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'Tenet Docs',
+        title: 'Tenet Documentation',
         logo: {
           alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          src: 'img/tenet.png',
         },
         items: [
           {
-            type: 'docSidebar',
-            sidebarId: 'docsSidebar',
             position: 'left',
-            label: 'Docs',
+            label: 'Node',
+            to: '/node/tutorials/running-node',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          {
+            position: 'left',
+            label: 'Bridge',
+            to: '/bridge',
+          },
           {
             href: 'https://github.com/tenet-org',
             label: 'GitHub',
@@ -86,48 +107,8 @@ const config = {
       },
       footer: {
         style: 'dark',
-        links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        links: [],
+        copyright: `Copyright © ${new Date().getFullYear()}. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,

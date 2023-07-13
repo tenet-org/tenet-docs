@@ -26,7 +26,7 @@ curl localhost:26657/block?height=5
 ## RPC/HTTP
 
 JSONRPC requests can be POST'd to the root RPC endpoint via HTTP. See the list
-of supported Tendermint RPC endpoints using Swagger [here](../api#clients).
+of supported Tendermint RPC endpoints using Swagger [here](ts).
 
 ## RPC/Websocket
 

@@ -29,7 +29,7 @@ the namespace. For example, the `eth_call` method resides in the eth namespace. 
 on a per-namespace basis.
 
 Find below the JSON-RPC namespaces supported on Tenet or head over to the documentation for the individual API endpoints
-and their respective curl commands on the [JSON-RPC Methods](./methods.md) page.
+and their respective curl commands on the [JSON-RPC Methods](methods.md) page.
 
 | Namespace                                         | Description                                                                                                                                                                                                                  | Supported | Enabled by Default |
 | ------------------------------------------------- |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| --------- | ------------------ |
