@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Running node
+# Running mainnet node
 
 ## Minimum Requirements
 To run mainnet or testnet validator nodes, you will need a machine with the following minimum hardware requirements:
@@ -23,7 +23,14 @@ git clone https://github.com/tenet-org/tenet-mainnet.git ~/.tenetd
 ```
 
 ### 2. Download binary
-Download binary from the [latest release](https://github.com/tenet-org/tenet-mainnet/releases/latest). Extract archive.
+
+Download binary from the [v11.0.7 release](https://github.com/tenet-org/tenet-mainnet/releases/tag/v11.0.7). Extract archive.
+
+:::tip
+If you want to sync your node from snapshot: enable ```statesync``` in `~/.tenetd/config/config.toml` and **replace binary with the [latest release](https://github.com/tenet-org/tenet-mainnet/releases/latest)**.
+
+Note that you should do it before first start, otherwise you will need to delete `~/.tenetd` directory and start again.
+:::
 
 ### 3. Install cosmovisor
 
@@ -45,9 +52,6 @@ cp ./tenetd $DAEMON_HOME/cosmovisor/genesis/bin
 ```
 
 ### 5. Start and sync node
-
-#### Optional
-If you want to sync your node from snapshot: enable ```statesync``` in [config](./config/config.toml)
 
 ```bash
 cosmovisor run start
