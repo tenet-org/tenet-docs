@@ -5,21 +5,27 @@ sidebar_position: 7
 
 ## Mainnet
 
-- Explorer: https://tenetscan.io/
+- Explorer (EVM): https://tenetscan.io/
+- Explorer (Cosmos): https://tenet.explorers.guru/validators
+- Explorer (Cosmos): https://ping.pub/tenet
+- Explorer (Cosmos): https://explorer.nodestake.top/tenet/
+- Explorer (Cosmos): https://cosmosrun.info/tenet
 - EVM RPC: https://rpc.tenet.org/
 - Tendermint RPC: https://tendermint-1.tenet.org/
 - Cosmos API: https://app.rpc.tenet.org/
 
 ## Testnet
 
-- Explorer: https://testnet.tenetscan.io/
+- Explorer (EVM): https://testnet.tenetscan.io/
+- Explorer (Cosmos): https://testnets.cosmosrun.info/tenet
 - EVM RPC: https://rpc.testnet.tenet.org/
 - Tendermint RPC: https://tendermint-1.testnet.tenet.org/
 - Cosmos API: https://app.rpc.testnet.tenet.org/
+- Snapshots: https://backups.synergynodes.com/snapshot_tenet_testnet.php
 
 ## Devnet
 
-- Explorer: https://devnet.tenetscan.io/
+- Explorer (EVM): https://devnet.tenetscan.io/
 - EVM RPC: https://rpc.devnet.tenet.org/
 - Tendermint RPC: https://tendermint-1.devnet.tenet.org/
 - Cosmos API: https://app.rpc.devnet.tenet.org/
