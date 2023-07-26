@@ -4,7 +4,6 @@
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
-
 function defineSection(section, options = {}) {
   return [
     '@docusaurus/plugin-content-docs',

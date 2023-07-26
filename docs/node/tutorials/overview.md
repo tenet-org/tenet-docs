@@ -3,7 +3,7 @@ order: 1
 title: Interacting with Tenetd (CLI)
 ---
 
-# Tenet Client
+# Interacting with Tenetd
 
 ## Tenet Daemon
 

@@ -1,7 +1,7 @@
-# Tenet 2, Instructions
+# Multichain
 
-This document describes the steps for validators and full node operators, to upgrade successfully to the v2 release. 
-The v2 upgrade is a mandatory maintenence release which updates the following core libraries:
+This document describes the steps for validators and full node operators, to upgrade successfully to the v11.2.0 release. 
+The v11.2.0 upgrade is a mandatory maintenence release which updates the following core libraries:
 
 ## Instructions
 
@@ -12,8 +12,8 @@ The v2 upgrade is a mandatory maintenence release which updates the following co
     - [System requirement](#system-requirement)
     - [Backups](#backups)
     - [Testing](#testing)
-    - [Current runtime, tenet_155-1 (pre-v2 upgrade) is running Tenet v11.0.7](#current-runtime-tenet_155-1-pre-v2-upgrade-is-running-tenet-v911)
-    - [Target runtime, tenet_155-1 (post-v2 upgrade) will run Tenet v2.1.0](#target-runtime-tenet_155-1-post-v2-upgrade-will-run-tenet-v200)
+    - [Current runtime, tenet_155-1 (pre-multichain upgrade) is running Tenet v11.0.7](#current-runtime-tenet_155-1-pre-multichain-upgrade-is-running-tenet)
+    - [Target runtime, tenet_155-1 (post-multichain upgrade) will run Tenet v11.2.0](#target-runtime-tenet_155-1-post-multichain-upgrade-will-run-tenet)
 - [Upgrade steps](#upgrade-steps)
     - [Method I: Manual Upgrade](#method-i-manual-upgrade)
     - [Method II: Upgrade using Cosmovisor](#method-ii-upgrade-using-cosmovisor)
@@ -31,11 +31,11 @@ The v2 upgrade is a mandatory maintenence release which updates the following co
 
 ## On-chain governance proposal attains consensus
 
-PROPOSAL INFO is the reference on-chain governance proposal for this upgrade, which is still in its voting period. Neither core developers nor core funding entities control the governance, and this governance proposal has passed in a _fully decentralized_ way.
+https://tenet.explorers.guru/proposal/2 is the reference on-chain governance proposal for this upgrade. Neither core developers nor core funding entities control the governance, and this governance proposal has passed in a _fully decentralized_ way.
 
 ## Upgrade date
 
-The upgrade will take place at a block height of `UPGRADE_HEIGHT`. The date/time of the upgrade is subject to change as blocks are not generated at a constant interval. 
+The upgrade will take place at a block height of `2 330 000`. The date/time of the upgrade is subject to change as blocks are not generated at a constant interval. 
 
 ## Chain-id will remain the same
 
@@ -68,13 +68,13 @@ It is critically important for validator operators to back-up the `.tenetd/data/
 
 For those validator and full node operators that are interested in ensuring preparedness for the impending upgrade, you can run a Local Testnet or join in our Tenet Public Testnet.
 
-### Current runtime, tenet_155-1 (pre-v2 upgrade) is running Tenet v11.0.7
+### Current runtime, tenet_155-1 (pre-multichain upgrade) is running Tenet v11.0.7
 
 The Cosmos Hub mainnet network, `tenet_155-1`, is currently running Tenet v11.0.7. We anticipate that operators who are running on v11.0.7, will be able to upgrade successfully. Validators are expected to ensure that their systems are up to date and capable of performing the upgrade. This includes running the correct binary, or if building from source, building with go `1.20`.
 
-### Target runtime, tenet_155-1 (post-v2 upgrade) will run Tenet v2.1.0
+### Target runtime, tenet_155-1 (post-multichain upgrade) will run Tenet v11.2.0
 
-The Cosmos Hub mainnet network, `tenet_155-1`, will run Tenet v2.1.0. Operators _MUST_ use this version post-upgrade to remain connected to the network.
+The Cosmos Hub mainnet network, `tenet_155-1`, will run Tenet v11.2.0. Operators _MUST_ use this version post-upgrade to remain connected to the network.
 
 ## Upgrade steps
 
@@ -89,21 +89,21 @@ If you prefer to use Cosmovisor to upgrade, some preparation work is needed befo
 
 ### Method I: Manual Upgrade
 
-Make sure Tenet v2.1.0 is installed by either downloading a [compatible binary](https://github.com/cosmos/tenet/releases/tag/v2.1.0), or building from source. Building from source requires **Golang 1.20**.
+Make sure Tenet v11.2.0 is installed by either downloading a [compatible binary](https://github.com/cosmos/tenet/releases/tag/v11.2.0), or building from source. Building from source requires **Golang 1.20**.
 
 Run Tenet v11.0.7 till upgrade height, the node will panic:
 
 ```shell
-ERR UPGRADE "v2" NEEDED at height: UPGRADE_HEIGHT: upgrade to v2 and applying upgrade "v2" at height:UPGRADE_HEIGHT
+ERR UPGRADE "multichain" NEEDED at height: 2330000
 ```
 
-Stop the node, and switch the binary to Tenet v2.1.0 and re-start by `tenetd start`.
+Stop the node, and switch the binary to Tenet v11.2.0 and re-start by `tenetd start`.
 
 It may take several minutes to a few hours until validators with a total sum voting power > 2/3 to complete their node upgrades. After that, the chain can continue to produce blocks.
 
 ### Method II: Upgrade using Cosmovisor
 
-::: warning
+:::note
 **Please Read Before Proceeding**
 Using Cosmovisor 1.2.0 and higher requires a lowercase naming convention for upgrade version directory. For Cosmovisor 1.1.0 and earlier, the upgrade version is not lowercased.
 :::
@@ -114,10 +114,10 @@ Using Cosmovisor 1.2.0 and higher requires a lowercase naming convention for upg
 
 | Cosmovisor Version | Binary Name in Path |
 |--------------------|---------------------|
-| 1.3                | v2                 |
-| 1.2                | v2                 |
-| 1.1                | v2                 |
-| 1.0                | v2                 |
+| 1.3                | multichain          |
+| 1.2                | multichain          |
+| 1.1                | multichain          |
+| 1.0                | multichain          |
 
 ### Manually preparing the binary
 
@@ -144,11 +144,11 @@ mkdir -p $TENET_HOME/cosmovisor/genesis/bin
 cp $(which tenetd) $TENET_HOME/cosmovisor/genesis/bin
 ````
 
-build Tenet v2.1.0, and move tenetd v2.1.0 to `$TENET_HOME/cosmovisor/upgrades/v2/bin`
+build Tenet v11.2.0, and move tenetd v11.2.0 to `$TENET_HOME/cosmovisor/upgrades/multichain/bin`
 
 ```shell
-mkdir -p  $TENET_HOME/cosmovisor/upgrades/v2/bin
-cp $(which tenetd) $TENET_HOME/cosmovisor/upgrades/v2/bin
+mkdir -p  $TENET_HOME/cosmovisor/upgrades/multichain/bin
+cp $(which tenetd) $TENET_HOME/cosmovisor/upgrades/multichain/bin
 ```
 
 Then you should get the following structure:
@@ -160,9 +160,9 @@ Then you should get the following structure:
 │   └── bin
 │       └── tenetd  #v11.0.7
 └── upgrades
-    └── v2
+    └── multichain
         └── bin
-            └── tenetd  #v2.1.0
+            └── tenetd  #v11.2.0
 ```
 
 Export the environmental variables:
@@ -242,10 +242,10 @@ Skipping the invariant checks can help decrease the upgrade time significantly.
 When the upgrade block height is reached, you can find the following information in the log:
 
 ```shell
-ERR UPGRADE "v2" NEEDED at height: UPGRADE_HEIGHT: upgrade to v2 and applying upgrade "v2" at height:UPGRADE_HEIGHT
+ERR UPGRADE "multichain" NEEDED at height: 2330000
 ```
 
-Then the Cosmovisor will create `$TENET_HOME/cosmovisor/upgrades/v2/bin` and download the Tenet v2.1.0 binary to this folder according to links in the `--info` field of the upgrade proposal.
+Then the Cosmovisor will create `$TENET_HOME/cosmovisor/upgrades/multichain/bin` and download the Tenet v11.2.0 binary to this folder according to links in the `--info` field of the upgrade proposal.
 This may take 7 minutes to a few hours, afterwards, the chain will continue to produce blocks once validators with a total sum voting power > 2/3 complete their nodes upgrades.
 
 _Please Note:_
@@ -263,7 +263,7 @@ During the network upgrade, core Tenet teams will be keeping an ever vigilant ey
 
 Steps to skip this upgrade proposal are simply to resume the tenet_155-1 network with the (downgraded) v11.0.7 binary using the following command:
 
-> tenetd start --unsafe-skip-upgrade UPGRADE_HEIGHT
+> tenetd start --unsafe-skip-upgrade 2330000
 
 Note: There is no particular need to restore a state snapshot prior to the upgrade height, unless specifically directed by core Tenet teams.
 
