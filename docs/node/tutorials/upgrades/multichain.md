@@ -1,7 +1,7 @@
 # Multichain
 
 This document describes the steps for validators and full node operators, to upgrade successfully to the v11.2.0 release. 
-The v11.2.0 upgrade is a mandatory maintenence release which updates the following core libraries:
+The v11.2.0 upgrade is a mandatory release.
 
 ## Instructions
 

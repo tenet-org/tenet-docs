@@ -70,9 +70,7 @@ Account`.
 
 :::tip
 If it takes some time to load the balance of the account, change the
-network to `Main Ethereum Network` (or any other than `Localhost 8545` or
-<Highlighter keyword="name" />) and then switch back to <Highlighter
-keyword="name" />.
+network to `Main Ethereum Network` (or any other than `Localhost 8545`) and then switch back.
 :::
 
 ## Download Account State
