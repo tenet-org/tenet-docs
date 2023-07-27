@@ -6,7 +6,7 @@ sidebar_position: 7
 ## Mainnet
 
 - Explorer (EVM): https://tenetscan.io/
-- Explorer (Cosmos): https://tenet.explorers.guru/validators
+- Explorer (Cosmos): https://tenet.explorers.guru/
 - Explorer (Cosmos): https://ping.pub/tenet
 - Explorer (Cosmos): https://explorer.nodestake.top/tenet/
 - Explorer (Cosmos): https://cosmosrun.info/tenet
