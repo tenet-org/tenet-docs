@@ -7,7 +7,7 @@ title: Interacting with Tenetd (CLI)
 
 ## Tenet Daemon
 
-`tenetd` is the tool that enables you to interact with the node that runs on the Cosmos Hub network, whether you run it yourself or not. Let us set it up properly. In order to install it, follow the [installation procedure](../getting-started/installation.md).
+`tenetd` is the tool that enables you to interact with the node that runs on the Tenet network, whether you run it yourself or not. Let us set it up properly. In order to install it, follow the [installation procedure](../getting-started/installation.md).
 
 ### Setting up tenetd
 
@@ -389,7 +389,7 @@ Please refer to the [Validator Setup](../validators/validator-setup.md) section 
 
 #### Delegate to a Validator
 
-On the upcoming mainnet, you can delegate `atom` to a validator. These [delegators](../delegators/delegator-faq.md) can receive part of the validator's fee revenue. Read more about the [Cosmos Token Model](https://github.com/cosmos/cosmos/raw/master/Cosmos_Token_Model.pdf).
+On the upcoming mainnet, you can delegate `atenet` to a validator. These [delegators](../delegators/delegator-faq.md) can receive part of the validator's fee revenue.
 
 ##### Query Validators
 
@@ -407,7 +407,7 @@ tenetd query staking validator <account_tenetval>
 
 #### Bond Tokens
 
-On the Cosmos Hub mainnet, we delegate `atenet`, where `1atom = 1000000atenet`. Here's how you can bond tokens to a testnet validator (_i.e._ delegate):
+On the Tenet mainnet, we delegate `atenet`, where `1 TENET = 1e18 atenet`. Here's how you can bond tokens to a testnet validator (_i.e._ delegate):
 
 ```bash
 tenetd tx staking delegate \
@@ -449,7 +449,7 @@ amount of tokens, use the following command.
 ```bash
 tenetd tx staking unbond \
   <validator_addr> \
-  10atom \
+  10atenet \
   --from=<key_name> \
   --chain-id=<chain_id>
 ```
@@ -484,7 +484,7 @@ A redelegation is a type delegation that allows you to bond illiquid tokens from
 tenetd tx staking redelegate \
   <src-validator-operator-addr> \
   <dst-validator-operator-addr> \
-  10atom \
+  10tenet \
   --from=<key_name> \
   --chain-id=<chain_id>
 ```
@@ -554,14 +554,14 @@ You can also query all of the delegations to a particular validator:
 
 ### Governance
 
-Governance is the process from which users in the Cosmos Hub can come to consensus
+Governance is the process from which users in the Tenet can come to consensus
 on software upgrades, parameters of the mainnet or signaling mechanisms through
 text proposals. This is done through voting on proposals, which will be submitted
-by `ATOM` holders on the mainnet.
+by `TENET` holders on the mainnet.
 
 Some considerations about the voting process:
 
-- Voting is done by bonded `ATOM` holders on a 1 bonded `ATOM` 1 vote basis
+- Voting is done by bonded `TENET` holders on a 1 bonded `TENET` 1 vote basis
 - Delegators inherit the vote of their validator if they don't vote
 - Votes are tallied at the end of the voting period (2 weeks on mainnet) where
   each address can vote multiple times to update its `Option` value (paying the transaction fee each time),
@@ -698,7 +698,7 @@ tenetd query gov deposit <proposal_id> <depositor_address>
 
 #### Vote on a Proposal
 
-After a proposal's deposit reaches the `MinDeposit` value, the voting period opens. Bonded `Atom` holders can then cast vote on it:
+After a proposal's deposit reaches the `MinDeposit` value, the voting period opens. Bonded `TENET` holders can then cast vote on it:
 
 ```bash
 tenetd tx gov vote <proposal_id> <Yes/No/NoWithVeto/Abstain> \
