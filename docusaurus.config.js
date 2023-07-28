@@ -14,7 +14,7 @@ function defineSection(section, options = {}) {
       id: section,
       sidebarPath: require.resolve('./sidebars.js'),
       breadcrumbs: true,
-      editUrl: 'https://github.com/tenet-org/tenet-docs/tree/main/',
+      editUrl: 'https://github.com/tenet-org/tenet-docs/edit/master/',
       ...options,
     }),
   ];
@@ -22,7 +22,7 @@ function defineSection(section, options = {}) {
 
 const SECTIONS = [
   defineSection('node'),
-  defineSection('bridge'),
+  defineSection('tLSD'),
 ];
 
 /** @type {import('@docusaurus/types').Config} */
@@ -94,8 +94,8 @@ const config = {
           },
           {
             position: 'left',
-            label: 'Bridge',
-            to: '/bridge',
+            label: 'tLSD',
+            to: '/tLSD/overview',
           },
           {
             href: 'https://github.com/tenet-org',
