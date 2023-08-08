@@ -23,6 +23,9 @@ function defineSection(section, options = {}) {
 const SECTIONS = [
   defineSection('node'),
   defineSection('tLSD'),
+  defineSection('diversified-pos'),
+  defineSection('tenet-stablecoin-protocol'),
+  defineSection('tokenomics'),
 ];
 
 /** @type {import('@docusaurus/types').Config} */
@@ -90,12 +93,27 @@ const config = {
           {
             position: 'left',
             label: 'Node',
-            to: '/node/tutorials/running-node',
+            to: '/node',
           },
           {
             position: 'left',
             label: 'tLSD',
-            to: '/tLSD/overview',
+            to: '/tLSD',
+          },
+          {
+            position: 'left',
+            label: 'Diversified POS',
+            to: '/diversified-pos',
+          },
+          {
+            position: 'left',
+            label: 'Stablecoin',
+            to: '/tenet-stablecoin-protocol',
+          },
+          {
+            position: 'left',
+            label: 'Tokenomics',
+            to: '/tokenomics',
           },
           {
             href: 'https://github.com/tenet-org',

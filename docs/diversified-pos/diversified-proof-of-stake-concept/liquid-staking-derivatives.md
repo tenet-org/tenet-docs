@@ -1,0 +1,3 @@
+# Liquid Staking Derivatives
+
+Liquid Staking Derivatives (LSDs) are tokenized representations of staked assets. They represent the value of an underlying staking asset and the rewards that asset has accrued. LSDs appreciate in value at the yield rate of their underlying staked assets. Unlike staked assets, LSDs can be traded freely and are excellent candidates to be Diversified Proof of Stake assets. Because they represent an already staked asset, they are an attractive source of increased yield when staked on a different chain, combining the underlying staking yield with the rewards produced through the Diversified Proof of Stake mechanism.
