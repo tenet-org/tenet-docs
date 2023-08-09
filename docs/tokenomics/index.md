@@ -18,8 +18,8 @@ tTENET, the LSD of TENET that represents TENET that is being used in Validator, 
 
 TENET employs a tokenomic model inspired by a class of tokenomic primitives called veTokenomics. tTENET can be locked to produce veTENET.
 
-{% hint style="info" %}
+:::tip
 veTENET stands for vote-escrowed TENET. This simply means tTENET is locked for a period of time. The longer you lock tTENET for, the more veTENET you receive.&#x20;
-{% endhint %}
+:::
 
 The main purpose of TENET's veTokenomic model is to incentivise users in the TENET DeFi ecosystem as well as getting as many users involved as possible in the governance of this ecosystem. TENET applies the veTokenomic model at the base layer of blockchain and uses its strengths to incentivise a diverse DeFi landscape.&#x20;

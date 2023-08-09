@@ -18,6 +18,8 @@ function defineSection(section, options = {}) {
       sidebarPath: require.resolve('./sidebars.js'),
       breadcrumbs: true,
       editUrl: 'https://github.com/tenet-org/tenet-docs/edit/master/',
+      remarkPlugins: [math],
+      rehypePlugins: [katex],
       ...options,
     }),
   ];
