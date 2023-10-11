@@ -13,6 +13,8 @@ sidebar_position: 1
 - EVM RPC: https://rpc.tenet.org/
 - Tendermint RPC: https://tendermint-1.tenet.org/
 - Cosmos API: https://app.rpc.tenet.org/
+- wss://tenet-rpc.publicnode.com:443/websocket
+- wss://tenet-evm.publicnode.com
 
 ## Testnet
 
