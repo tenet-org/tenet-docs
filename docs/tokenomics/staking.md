@@ -4,11 +4,11 @@ sidebar_position: 3
 
 # Staking
 
-veTENET owners are eligible to various streams of income.&#x20;
+veTENET owners are eligible to various streams of income.
 
-As tTENET is used to produce veTENET, the underlying tTENET that backs the produced veTENET keeps on earning validator rewards. These validator rewards are distributed equally over all veTENET owners.&#x20;
+As tTENET is used to produce veTENET, the underlying tTENET that backs the produced veTENET keeps on earning validator rewards. These validator rewards are distributed equally over all veTENET owners.
 
-veTENET also receives DeFi protocol rewards from the TENET DeFi ecosystem.&#x20;
+veTENET also receives DeFi protocol rewards from the TENET DeFi ecosystem.
 
 The following protocols send fees to veTENET in the following ways:
 

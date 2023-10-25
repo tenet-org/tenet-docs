@@ -1,6 +1,6 @@
 # Rewards for Diversified Proof of Stake assets
 
-The amount of rewards a Diversified Proof of Stake asset accrues is determined by the asset's Reward Weight, which is set by governance. This parameter represents the maximum proportion of rewards an asset can earn relative to the total rewards of the chain. Native tokens always have a Reward Weight of 1.&#x20;
+The amount of rewards a Diversified Proof of Stake asset accrues is determined by the asset's Reward Weight, which is set by governance. This parameter represents the maximum proportion of rewards an asset can earn relative to the total rewards of the chain. Native tokens always have a Reward Weight of 1.
 
 $$Asset\ Reward\ Percentage = \frac{Asset\ Reward\ Weight}{\sum_{i=1}^{n}Asset_i\ Reward\ Weight}$$
 

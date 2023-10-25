@@ -4,13 +4,13 @@ sidebar_position: 2
 
 # Locking
 
-tTENET can be locked to produce veTENET.&#x20;
+tTENET can be locked to produce veTENET.
 
-veTENET makes you eligible for a number of benefits and gives you voting power over governance and reward gauges.&#x20;
+veTENET makes you eligible for a number of benefits and gives you voting power over governance and reward gauges.
 
-The longer you lock tTENET for veTENET, the more veTENET you receive.&#x20;
+The longer you lock tTENET for veTENET, the more veTENET you receive.
 
-The minimum amount of time to lock tTENET for veTENET is 1 week with a maximum of 4 years.&#x20;
+The minimum amount of time to lock tTENET for veTENET is 1 week with a maximum of 4 years.
 
 The following table shows how much veTENET is received for the duration of the lock:
 

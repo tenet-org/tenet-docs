@@ -10,7 +10,7 @@ These parameters can be updated by [`Governance`](../tokenomics/governance.md).
 
 Minimum Collateral Ratio (MCR) = set individually for each collateral type, with a minimum of`125%`
 
-Liquidation Reserve Fee = `20.00 LSDC`
+Liquidation Reserve Fee = `10.00 LSDC`
 
 Minimum Redemption Fee = `0.5%`
 

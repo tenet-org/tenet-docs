@@ -22,7 +22,7 @@ $$Security_{ABC} = StakedA + LSD_B + LSD_C$$
 
 
 
-Where LSD\_B and LSD\_C represent the value of the staked assets B and C, respectively.&#x20;
+Where LSD\_B and LSD\_C represent the value of the staked assets B and C, respectively.
 
 This allows the security of a chain to be strengthened by cross-chain collaboration, even if the participating chains are of varying sizes and security levels.
 

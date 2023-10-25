@@ -8,9 +8,9 @@ sidebar_position: 1
 
 The Tenet Stablecoin Protocol is a decentralized stablecoin protocol using the Liquity model that allows you to draw interest free loans against yield-bearing collateral assets. Loans are drawn in LSDC (a USD pegged stablecoin) and need to maintain a minimum collateral ratio to keep the system healthy and over-collateralized.
 
-In addition to the collateral, the loans are secured by a Stability Pool containing LSDC and by fellow borrowers collectively acting as guarantors of last resort. Learn more about these mechanisms in our documentation.&#x20;
+In addition to the collateral, the loans are secured by a Stability Pool containing LSDC and by fellow borrowers collectively acting as guarantors of last resort. Learn more about these mechanisms in our documentation.
 
-The Tenet Stablecoin as a protocol is non-custodial and based on the codebase of [Liquity](https://www.liquity.org/) which has been extended to support multiple, custom collateral types and a unique governance system secured by a base layer protocol.&#x20;
+The Tenet Stablecoin as a protocol is non-custodial and based on the codebase of [Liquity](https://www.liquity.org/) which has been extended to support multiple, custom collateral types and a unique governance system secured by a base layer protocol.
 
 If you still have questions after browsing our FAQs and documentation — join our Discord!
 
@@ -20,17 +20,15 @@ The Tenet Stablecoin Protocol creates a more capital efficient and user-friendly
 
 In addition, whilst other Decentralized stablecoins like DAI and LUSD are minted against static collateral, LSCD is minted against Liquid Staking Derivatives of assets staked on Tenet Validators. This means that the collateral itself is yield-bearing and appreciating in value. Because the collateral base carries a native yield, an end-user is able to continue to earn interest on their underlying collateral whilst having on-demand liquidity by minting a stablecoin.
 
-
-
 ### **What are the key benefits of the** Tenet Stablecoin Protocol**?**
 
 Tenet Stablecoin Protocol's key benefits include:
 
-* Positive interest rate — as a borrower, not only do you not pay interest to borrow LSDC but you earn interest as yield on your underlying collateral
-* Ability to re-utilise liquidity from [yield-bearing assets ](broken-reference)across DeFi
-* Protocol level governance — Tenet Stablecoin Protocol is governed by the validator network on the Tenet network, benefiting from the security of the DiPos model
-* Low minimum collateral ratio —  varying depending on the LSD deposited but beginning at `125%` allow for more efficient usage of deposited assets
-* Directly [redeemable](broken-reference) —  LSDC can be redeemed at face value for the underlying collateral at any time
+* Positive interest rate — as a borrower, not only is borrowing LSDC [interest-free](/tenet-stablecoin-protocol/borrowing#how-can-the-protocol-offer-interest-free-borrowing), but you earn interest as yield on your underlying collateral
+* Ability to re-utilise liquidity from [yield-bearing assets ](/tLSD/aggregator)across DeFi
+* Protocol level governance — Tenet Stablecoin Protocol is governed by the validator network on the Tenet network, benefiting from the security of the [DiPos](/diversified-pos) model
+* Low [minimum collateral ratio](/tenet-stablecoin-protocol/borrowing#what-is-the-minimum-collateral-ratio-mcr-and-the-recommended-collateral-ratio) —  varying depending on the LSD deposited but beginning at `125%` allow for more efficient usage of deposited assets
+* Directly [redeemable](/tenet-stablecoin-protocol/redemptions-and-lsdc-price-stability) —  LSDC can be redeemed at face value for the underlying collateral at any time
 
 ### **What collateral types does the** Tenet Stablecoin Protocol **support?**
 
@@ -54,15 +52,15 @@ You will need to be connected to the Tenet network: insert RPC details
 
 ### What are the main use cases of the Tenet Stablecoin Protocol?
 
-1. Borrow LSDC against collateral by opening a Collateralized Liquid Interest Position (CLIP)
-2. Secure Tenet Stablecoin Protocol by providing LSDC to the [Stability Pool ](broken-reference)in exchange for rewards from the Native Rewards Pool
-3. Redeem `1 LSDC` for `1 USD` worth of collateral when the LSDC peg falls below `$1`
+1. Borrow LSDC against collateral by opening a [Collateralized Liquid Interest Position (CLIP)](/tenet-stablecoin-protocol/borrowing#what-is-a-clip)
+2. Secure Tenet Stablecoin Protocol by providing LSDC to the [Stability Pool ](/tenet-stablecoin-protocol/stability-pool-and-liquidations)in exchange for rewards from the Native Rewards Pool
+3. [Redeem](/tenet-stablecoin-protocol/redemptions-and-lsdc-price-stability#what-are-redemptions) `1 LSDC` for `1 USD` worth of collateral when the LSDC peg falls below `$1`
 
 ### What is LSDC?
 
-LSDC is the USD-pegged stablecoin used to pay out loans on the Tenet Stablecoin Protocol protocol. At any time it can be redeemed against the underlying [collateral](broken-reference) at face value. Learn more about the [stability mechanism](https://docs.liquity.org/faq/lusd-redemptions).
+LSDC is the USD-pegged stablecoin used to pay out loans on the Tenet Stablecoin Protocol. At any time it can be redeemed against the underlying [collateral](/tenet-stablecoin-protocol/borrowing#what-do-you-mean-by-collateral) at face value. Learn more about the [stability mechanism](https://docs.liquity.org/faq/lusd-redemptions).
 
-LSDC stands for Liquid Staking Dollar as it is backed by LSDs from the Tenet blockchain network.&#x20;
+LSDC stands for Liquid Staking Dollar as it is backed by LSDs from the Tenet blockchain network.
 
 ### Does Tenet Stablecoin Protocol have a token?
 
@@ -70,9 +68,9 @@ Tenet Stablecoin Protocol is a native dApp on the Tenet blockchain meaning that 
 
 ### What do I need in order to use Tenet Stablecoin Protocol?
 
-To borrow LSDC, all you need is a wallet (e.g. MetaMask) and sufficient Tenet to open a CLIP and pay the gas fees.&#x20;
+To borrow LSDC, all you need is a wallet (e.g. MetaMask) and sufficient Tenet to open a CLIP and pay the gas fees.
 
-To become a [Stability Pool](broken-reference) depositor , you need to have LSDC. LSDC can be borrowed by opening a CLIP. You can also use an AMM or another exchange to buy LSDC on the open market.
+To become a [Stability Pool](/tenet-stablecoin-protocol/stability-pool-and-liquidations) depositor , you need to have LSDC. LSDC can be borrowed by opening a CLIP. You can also use an AMM or another exchange to buy LSDC on the open market.
 
 ### Does Tenet Stablecoin Protocol charge any fees?
 
@@ -83,15 +81,13 @@ There is a one-off fee whenever LSDC is borrowed, and when LUSD is redeemed:
 
 Both fees depend on the redemption volumes, i.e. they increase upon every redemption in function of the redeemed amount, and decay over time as long as no redemptions take place. The intent is to throttle large redemptions with higher fees, and to throttle borrowing directly after large redemption volumes. The fee decay over time ensures that the fee for both borrowers and redeemers will “cool down”, while redemptions volumes are low.
 
-The fees cannot become smaller than `0.5%`, which protects the redemption facility from being misused by arbitrageurs front-running the price feed. The borrowing fee is capped at `5%`, keeping the system (somewhat) attractive for borrowers even in phases where the monetary is contracting due to redemptions.&#x20;
+The fees cannot become smaller than `0.5%`, which protects the redemption facility from being misused by arbitrageurs front-running the price feed. The borrowing fee is capped at `5%`, keeping the system (somewhat) attractive for borrowers even in phases where the monetary is contracting due to redemptions.
 
 ### How can I earn money using Tenet Stablecoin Protocol?
 
-
-
 A simple way to use the Tenet Stablecoin Protocol to earn money is by depositing LSDC to the Stability Pool which will earn money from the following sources:
 
-1. Earn liquidation gains when unhealthy CLIPS have their debt repaid.&#x20;
+1. Earn liquidation gains when unhealthy CLIPS have their debt repaid.
 2. Earn TENET from the Native Rewards Pool based on Native Gauge voting.
 
 ### Can I lose my funds?
@@ -100,21 +96,21 @@ As a non-custodial system, all the tokens sent to the protocol will be held and 
 
 There are two scenarios under which you may lose a part of your funds:
 
-* You are a borrower (CLIP owner) and your collateral is [liquidated](broken-reference). You will still keep your borrowed LSDC, but your CLIP will be closed and your collateral will be used to compensate [Stability Pool](broken-reference) depositors.
+* You are a borrower (CLIP owner) and your collateral is [liquidated](/tenet-stablecoin-protocol/stability-pool-and-liquidations#what-are-liquidations). You will still keep your borrowed LSDC, but your CLIP will be closed and your collateral will be used to compensate [Stability Pool](/tenet-stablecoin-protocol/stability-pool-and-liquidations#what-is-the-stability-pool) depositors.
 * You are a Stability Pool depositor and your deposited LSDC is used to repay debt from liquidated borrowers. Since liquidations are triggered any time borrowers’ collateral drops below the minimum threshold, you will receive more collateral in return. However, if the collateral decreases in price and you maintain exposure, you may lose value in your total pool deposits.
 
-Please note that LSDC isn't perfectly pegged to the USD, and can deviate slightly in both directions under certain market conditions. See On Price Stability of LSDC for more details.
+Please note that [LSDC isn't perfectly pegged to the USD](/tenet-stablecoin-protocol/redemptions-and-lsdc-price-stability), and can deviate slightly in both directions under certain market conditions.
 
 Although the system will be diligently audited and is primarily based on tried and tested code, a hack or a bug that results in losses for the users can never be fully excluded.
 
 ### Is the Tenet Stablecoin Protocol a completely new codebase?
 
-Tenet Stablecoin Protocol has been initially forked from Liquity, a stablecoin protocol on Ethereum Mainnet.&#x20;
+Tenet Stablecoin Protocol has been initially forked from Liquity, a stablecoin protocol on Ethereum Mainnet.
 
-Forking from robust and time-proven codebases has several advantages with regards to security and risk of exploits being present.&#x20;
+Forking from robust and time-proven codebases has several advantages with regards to security and risk of exploits being present.
 
 We have extended the Liquity codebase by introducing Governance capability to set certain parameters and to upgrade contracts as we expect Tenet Stablecoin Protocol to grow and adapt to the needs of the Tenet blockchain.
 
-We have also added support for multiple collateral types while Liquity only works with a single collateral type, ETH. \
-\
-These docs are largely based on the documentation provided by Liquity protocol.&#x20;
+We have also added support for multiple collateral types while Liquity only works with a single collateral type, ETH.
+
+These docs are largely based on the documentation provided by Liquity protocol.
