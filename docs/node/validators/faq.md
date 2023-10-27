@@ -378,17 +378,7 @@ distributed according to the same mechanism.
 
 <summary><b>How are fees distributed?</b></summary>
 
-Fees are distributed 50% to the active validator set and 50% to veTenet holders with the exception thatthe bl ock proposer can get a bonus on the fees of the block it proposes if it includes more than the strict minimum of required precommits.
-
-When a validator is selected to propose the next block, it must include at least ⅔ precommits for the previous block in
-the form of validator signatures. However, there is an incentive to include more than ⅔ precommits in the form of a
-bonus. The bonus is linear: it ranges from 1% if the proposer includes ⅔rd precommits (minimum for the block to be
-valid) to 5% if the proposer includes 100% precommits. Of course the proposer should not wait too long or other
-validators may timeout and move on to the next proposer. As such, validators have to find a balance between
-wait-time to get the most signatures and risk of losing out on proposing the next block. This mechanism aims
-to incentivize non-empty block proposals, better networking between validators as well as to mitigate censorship.
-
-[DAN TO ADD PROPER EXAMPLE INCLUDING SPLIT BETWEEN VALIDATORS (NOT DELEGATORS) AND VETENET HOLDERS PLUS BLOCK PROPOSER BONUS (IF THIS IS STILL APPLIED]
+Fees are distributed 50% to the active validator set and 50% to veTenet holders.
 
 </details>
 
