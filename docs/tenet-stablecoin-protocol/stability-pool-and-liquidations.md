@@ -14,7 +14,7 @@ The Stability Pool is funded by users transferring LSDC into it (called Stabilit
 
 ### Why should I deposit LSDC to the Stability Pool?
 
-By participating as a Stability Provider, you stand to gain through multiple revenue streams. These include profits generated from liquidations, as well as a share of both minting and redemption fees. Additionally, you will be eligible for supplemental incentives provided through the Tenet protocol, which accrue from native dApp revenues and transaction fees
+By participating as a Stability Provider, you stand to gain through profits generated from liquidations. Additionally, you will be eligible for TENET rewards from the Native Rewards Pool, which are determined by Native Gauge voting.
 
 ### What are liquidations?
 
@@ -32,7 +32,7 @@ Anybody can liquidate a CLIP as soon as it drops below the Minimum Collateral Ra
 
 The liquidation of CLIPs is connected with certain gas costs which the initiator has to cover. The cost per CLIP was reduced by implementing batch liquidations of up to 160 **-** 185 CLIPs but with the aim of ensuring that liquidations remain profitable even in times of soaring gas prices the protocol offers a gas compensation given by the following formula:
 
-`gas compensation = 10 LSDC + 0.5% of` CLIPs `collateral (ETH)`
+`gas compensation = 10 LSDC + 0.5% of` CLIPs `collateral`
 
 The `10 LSDC` is funded by a [Liquidation Reserve](/tenet-stablecoin-protocol/borrowing#what-is-the-liquidation-reserve) while the variable `0.5%` part comes from the liquidated collateral, slightly reducing the liquidation gain for Stability Providers.
 
@@ -44,9 +44,9 @@ As liquidations happen just below a collateral ratio of `125%`, you will most li
 
 Let’s say there is a total of `1,000,000 LSDC` in the Stability Pool and your deposit is `100,000 LSDC`.
 
-Now, a CLIP with debt of `200,000 LSDC` and collateral of `155 twstETH` is liquidated at an `twstETH` price of `$1600`, and thus at a collateral ratio of `124% (= 100% * (155 * 1600) / 200,000)`. Given that your pool share is `10%`, your deposit will go down by `10%` of the liquidated debt (`20,000 LSDC`), i.e. from `100,000` to `80,000 LSDC`. In return, you will gain `10%` of the liquidated collateral, i.e. `15.5 twstETH`, which is currently worth `$24,800`. Your net gain from the liquidation is `$4,800`.
+Now, a CLIP with debt of `200,000 LSDC` and collateral of `155 wtwstETH` is liquidated at a `wtwstETH` price of `$1600`, and thus at a collateral ratio of `124% (= 100% * (155 * 1600) / 200,000)`. Given that your pool share is `10%`, your deposit will go down by `10%` of the liquidated debt (`20,000 LSDC`), i.e. from `100,000` to `80,000 LSDC`. In return, you will gain `10%` of the liquidated collateral, i.e. `15.5 wtwstETH`, which is currently worth `$24,800`. Your net gain from the liquidation is `$4,800`.
 
-Note that depositors can immediately withdraw the collateral received from liquidations and sell it to reduce their exposure to `twstETH`, if the USD value of `twstETH` is expected to decrease.
+Note that depositors can immediately withdraw the collateral received from liquidations and sell it to reduce their exposure to `wtwstETH`, if the USD value of `wtwstETH` is expected to decrease.
 
 ### Can I withdraw my deposit whenever I want?
 
@@ -54,7 +54,7 @@ As a general rule, you can withdraw the deposit made to the Stability Pool at an
 
 ### What oracle are you using to determine the price of collateral?
 
-We employ a specialized version of the Chainlink protocol that we have forked for our specific needs. This fork retains the core logic of Chainlink, but is tailored to support our unique collateral assets, known as [wTLSD tokens](/tLSD/aggregator). These tokens derive their value from underlying LSD assets, with an intermediate step involving TLSD assets.
+We employ a specialized version of the Chainlink protocol that we have forked for our specific needs. This fork retains the core logic of Chainlink, but is tailored to support our unique collateral assets, known as [wTLSD tokens](/tLSD/aggregator). These tokens derive their value from underlying LSD assets, with an intermediate step involving tLSD assets.
 
 #### How Does it Work?
 
@@ -62,8 +62,8 @@ We employ a specialized version of the Chainlink protocol that we have forked fo
     - The price of the underlying LSD asset is initially obtained from our customized Chainlink price feed.
 
 2. **Ratio Computations**:
-    - The ratio between the value of LSD and TLSD is calculated via the function `TLSD.totalAssets() / TLSD.totalSupply()` executed on the TLSD contract.
-    - The ratio between the value of TLSD and wTLSD is computed through the function `wTLSD.totalAssets() / wTLSD.totalSupply()` carried out on the wTLSD contract.
+    - The ratio between the value of LSD and tLSD is calculated via the function `TLSD.totalAssets() / TLSD.totalSupply()` executed on the tLSD contract.
+    - The ratio between the value of tLSD and wTLSD is computed through the function `wTLSD.totalAssets() / wTLSD.totalSupply()` carried out on the wTLSD contract.
 
 3. **Final Price Calculation**:
     - Our Solidity smart contract, known as `ERC4626PriceAggregator`, processes these ratios and the base LSD price to derive the final wTLSD price.
