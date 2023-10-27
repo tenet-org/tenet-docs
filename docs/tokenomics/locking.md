@@ -14,13 +14,13 @@ The minimum amount of time to lock TENET for veTENET is 2 weeks with a maximum o
 
 The following table shows how much veTENET is received for the duration of the lock:
 
-| Duration | tTenet | veTENET |
+| Duration | Tenet  | veTENET |
 | -------- | ------ | ------- |
-| 1 week   | 100    | 0.479   |
-| 1 month  | 100    | 2.123   |
-| 3 months | 100    | 6.371   |
-| 6 months | 100    | 12.740  |
-| 1 year   | 100    | 25      |
-| 4 years  | 100    | 100     |
+| 2 weeks  | 100    | 1.92    |
+| 1 month  | 100    | 4.17    |
+| 3 months | 100    | 12.5    |
+| 6 months | 100    | 25      |
+| 1 year   | 100    | 50      |
+| 2 years  | 100    | 100     |
 
 Note that veTENET is not a liquid token that can be transferred between addresses.
