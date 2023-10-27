@@ -4,7 +4,7 @@ sidebar_position: 5
 
 # Protocol parameters
 
-Below you can a list of protocol parameters and their corresponding value.
+Below is a list of protocol parameters and their corresponding value.
 
 These parameters can be updated by [`Governance`](../tokenomics/governance.md).
 
