@@ -10,7 +10,7 @@ veTENET makes you eligible for a number of benefits and gives you voting power o
 
 The longer you lock TENET for, the more veTENET you receive.
 
-The minimum amount of time to lock TENET for veTENET is 1 week with a maximum of 2 years.
+The minimum amount of time to lock TENET for veTENET is 2 weeks with a maximum of 2 years.
 
 The following table shows how much veTENET is received for the duration of the lock:
 
