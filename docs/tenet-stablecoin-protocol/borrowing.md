@@ -6,7 +6,7 @@ sidebar_position: 2
 
 ### **Why would I use** Tenet Stablecoin Protocol **for borrowing?**
 
-Tenet Stablecoin Protocol offers interest-free loans and is more capital efficient than other borrowing systems (i.e. less collateral is needed for the same loan). It allows you to collateralize assets that are already yield-bearing through their participation in Tenet validators.
+Tenet Stablecoin Protocol offers interest-free loans and is more capital efficient than other borrowing systems (i.e. less collateral is needed for the same loan). It allows you to collateralize assets that are already yield-bearing through their participation in Tenet validation (and underlying yield on the assets).
 
 Instead of selling these collateral assets to have liquid funds, you can use the protocol to lock up your LSDs, borrow against them to withdraw LSDC, and then repay your loan at a future date.
 
@@ -22,7 +22,7 @@ A Clip is where you take out and maintain your loan. Each CLIP is linked to a Te
 
 CLIPs maintain two balances: one is the collateral asset and the other is a debt denominated in LSDC. You can change the amount of each by adding collateral or repaying debt. As you make these balance changes, your CLIPs collateral ratio changes accordingly.
 
-CLIPs are great because they enable extra liquidity in the form of LSDC loans against yield-bearing collateral. This creates a self-repaying loan as your collateral earns a positive interest.
+CLIPs are great because they enable extra liquidity in the form of LSDC loans against yield-bearing collateral. This effectively creates a self-repaying loan as your collateral earns a positive interest.
 
 You can close your CLIP at any time by fully paying off your debt.
 
@@ -30,15 +30,11 @@ You can close your CLIP at any time by fully paying off your debt.
 
 Collateral is any asset which a borrower must provide to take out a loan, acting as a security for the debt.
 
-Tenet Stablecoin Protocol supports Liquid Staking Derivatives of Tenet validators as collateral in its CLIPs.
+Currently, Tenet Stablecoin Protocol supports Liquid Staking Derivatives of Tenet validators as collateral in its CLIPs. Tenet Stablecoin Protocol plans to add additional yield bearing assets in the future.
 
 ### Which assets are accepted as collateral by Tenet Stablecoin Protocol ?
 
-Currently, Tenet Stablecoin Protocol accepts the following assets:
-
-1. twstETH
-2. tcbETH
-3. tankrBNB
+On launch, Tenet Stablecoin Protocol will accept a numebr of different LSDs that have been restaked to Tenet validators.
 
 ### **How can the protocol offer interest-free borrowing?**
 
@@ -86,13 +82,13 @@ The minimum collateral ratio (or MCR for short) is the lowest ratio of debt to c
 
 This is a protocol parameter that is set individually for each collateral type (with a minimum of `125%)`. So if your CLIP has a debt `10,000 LSDC` and the MCR for that collateral type is 125%, you would need at least `$12,500` worth of assets posted as collateral to avoid being liquidated.
 
-Note that asset prices can be quite volatile and if you are not monitoring your collateral ratio with a software agent, you need to leave some margin to account for collateral assets dropping in value when you can not respond in due time. In general, it is wise to be on the conservative side to avoid any liquidation scenario's.
+Note that asset prices can be quite volatile and if you are not monitoring your collateral ratio with a software agent, you need to leave some margin to account for collateral assets dropping in value when you can not respond in due time. In general, it is wise to be on the conservative side to avoid any liquidation scenarios.
 
 
 
 ### **What happens if my** CLIP **is liquidated?**
 
-You lose your collateral as your debt is paid off through [liquidation](/tenet-stablecoin-protocol/stability-pool-and-liquidations#what-are-liquidations), i.e. you will no longer be able to retrieve your collateral by repaying your debt. A liquidation thus results in a net loss of `20% (= 100% * 25 / 125)` of your collateral’s Dollar value.
+You lose your collateral as your debt is paid off through [liquidation](/tenet-stablecoin-protocol/stability-pool-and-liquidations#what-are-liquidations), i.e. you will no longer be able to retrieve your collateral by repaying your debt. A liquidation thus results in a net loss of `20% (= 100% * 25 / 125)` of your collateral’s Dollar value at the time of liquidation.
 
 ### **What is the Liquidation Reserve?**
 
