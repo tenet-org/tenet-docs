@@ -6,13 +6,13 @@ sidebar_position: 2
 
 ### **Why would I use** Tenet Stablecoin Protocol **for borrowing?**
 
-Tenet Stablecoin Protocol offers interest-free loans and is more capital efficient than other borrowing systems (i.e. less collateral is needed for the same loan). It allows you to collateralize assets that are already yield-bearing through their participation in Tenet validators.&#x20;
+Tenet Stablecoin Protocol offers interest-free loans and is more capital efficient than other borrowing systems (i.e. less collateral is needed for the same loan). It allows you to collateralize assets that are already yield-bearing through their participation in Tenet validation (and underlying yield on the assets).
 
-Instead of selling these collateral assets to have liquid funds, you can use the protocol to lock up your LSDs, borrow against them to withdraw LSDC, and then repay your loan at a future date.&#x20;
+Instead of selling these collateral assets to have liquid funds, you can use the protocol to lock up your LSDs, borrow against them to withdraw LSDC, and then repay your loan at a future date.
 
-This allows users to use leverage by drawing a loan against yield-bearing collateral and swapping the LSDC for more yield-bearing collateral and depositing more into the CLIP.&#x20;
+This allows users to use leverage by drawing a loan against yield-bearing collateral and swapping the LSDC for more yield-bearing collateral and depositing more into the CLIP.
 
-The ability to get extra liquidity against already productive assets that users want to hold for the long term allows them to remain exposed to both the underlying asset as well as the yield that is being earned.&#x20;
+The ability to get extra liquidity against already productive assets that users want to hold for the long term allows them to remain exposed to both the underlying asset as well as the yield that is being earned.
 
 ### **What is a CLIP?**
 
@@ -22,23 +22,19 @@ A Clip is where you take out and maintain your loan. Each CLIP is linked to a Te
 
 CLIPs maintain two balances: one is the collateral asset and the other is a debt denominated in LSDC. You can change the amount of each by adding collateral or repaying debt. As you make these balance changes, your CLIPs collateral ratio changes accordingly.
 
-CLIPs are great because they enable extra liquidity in the form of LSDC loans against yield-bearing collateral. This creates a self-repaying loan as your collateral earns a positive interest.&#x20;
+CLIPs are great because they enable extra liquidity in the form of LSDC loans against yield-bearing collateral. This effectively creates a self-repaying loan as your collateral earns a positive interest.
 
 You can close your CLIP at any time by fully paying off your debt.
 
 ### **What do you mean by collateral?**
 
-Collateral is any asset which a borrower must provide to take out a loan, acting as a security for the debt.&#x20;
+Collateral is any asset which a borrower must provide to take out a loan, acting as a security for the debt.
 
-Tenet Stablecoin Protocol supports Liquid Staking Derivatives of Tenet validators as collateral in its CLIPs.&#x20;
+Currently, Tenet Stablecoin Protocol supports Liquid Staking Derivatives of Tenet validators as collateral in its CLIPs. Tenet Stablecoin Protocol plans to add additional yield bearing assets in the future.
 
-### Which assets are accepted as collateral by Tenet Stablecoin Protocol ?&#x20;
+### Which assets are accepted as collateral by Tenet Stablecoin Protocol ?
 
-Currently, Tenet Stablecoin Protocol accepts the following assets:
-
-1\. twstETH \
-2\. tcbETH\
-3\. tankrBNB
+On launch, Tenet Stablecoin Protocol will accept a numebr of different LSDs that have been restaked to Tenet validators.
 
 ### **How can the protocol offer interest-free borrowing?**
 
@@ -52,11 +48,9 @@ To borrow you must open a CLIP and deposit a certain amount of collateral to it.
 
 ### **Do I have to pay fees as a borrower?**
 
-Every time you draw LSDC from your CLIP, a one-off borrowing fee is charged on the drawn amount and added to your debt. Please note that the borrowing fee is variable (and determined algorithmically) and has a minimum value of `0.5%` under normal operation.&#x20;
+Every time you draw LSDC from your CLIP, a one-off borrowing fee is charged on the drawn amount and added to your debt. Please note that the borrowing fee is variable (and determined algorithmically) and has a minimum value of `0.5%` under normal operation.
 
-LSDs deposited as collateral to a CLIP will continue earning their yield from the Tenet base layer validation process. A 10% fee is taken by Tenet Stablecoin Protocol with the remainder being made available for claiming by the CLIP owner. \
-\
-A `10 LSDC` [Liquidation Reserve](broken-reference) charge will be applied as well, but returned to you upon repayment of debt.&#x20;
+A `10 LSDC` [Liquidation Reserve](/tenet-stablecoin-protocol/borrowing#what-is-the-liquidation-reserve) charge will be applied as well, but returned to you upon repayment of debt.
 
 Another consideration is the price of LSDC at the time of repayment. If at the time you want to repay your loan LSDC is trading at $1.02 on the market and you need to buy it, you are incurring a 2% 'fee'. You can avoid this by having your borrowed funds readily available or by being able to wait for LSDC to return to peg.
 
@@ -64,7 +58,7 @@ Another consideration is the price of LSDC at the time of repayment. If at the t
 
 The borrowing fee is added to the debt of the CLIP and is given by a `baseRate` . The fee rate is confined to a range between `0.5%` and `5%` and is multiplied by the amount of liquidity drawn by the borrower.
 
-For example: The borrowing fee stands at `0.5%` and the borrower wants to receive `4,000 LSDC` to their wallet. Being charged a borrowing fee of `20.00 LSDC`, the borrower will incur a debt of`4,030 LSDC` after the Liquidation Reserve and issuance fee are added.&#x20;
+For example: The borrowing fee stands at `0.5%` and the borrower wants to receive `4,000 LSDC` to their wallet. Being charged a borrowing fee of `20.00 LSDC`, the borrower will incur a debt of`4,030 LSDC` after the Liquidation Reserve and issuance fee are added.
 
 ### **When do I need to pay my loan back?**
 
@@ -72,29 +66,29 @@ Loans issued by the protocol do not have a repayment schedule. You can leave you
 
 ### What is the collateral ratio?
 
-This is the ratio between the Dollar value of the collateral in your CLIP and its debt in LSDC. The collateral ratio of your CLIP will fluctuate over time as the price of the collateral asset changes. You can influence the ratio by adjusting your CLIPs collateral and/or debt — i.e. adding more collateral or paying off some of your debt.&#x20;
+This is the ratio between the Dollar value of the collateral in your CLIP and its debt in LSDC. The collateral ratio of your CLIP will fluctuate over time as the price of the collateral asset changes. You can influence the ratio by adjusting your CLIPs collateral and/or debt — i.e. adding more collateral or paying off some of your debt.
 
 For example: Let’s say the current price of twstETH is `$2,000` and you decide to deposit `10 twstETH`. If you borrow `10,000 LUSD`, then the collateral ratio for your CLIP would be `200%`.
 
-$$\frac{10 twstETH \ * \ $2.000}{10.000 \ LSDC} * 100\% = 200\%$$
+$$
+\frac{10 \text{ twstETH } * 2000}{10000 \text{ LSDC }} * 100\% = 200\%
+$$
 
-
-
-If you instead took out `15,000 LSDC` that would put your ratio at `133%`.&#x20;
+If you instead took out `15,000 LSDC` that would put your ratio at `133%`.
 
 ### **What is the minimum collateral ratio (MCR) and the "recommended" collateral ratio?**
 
-The minimum collateral ratio (or MCR for short) is the lowest ratio of debt to collateral that will not trigger a liquidation.&#x20;
+The minimum collateral ratio (or MCR for short) is the lowest ratio of debt to collateral that will not trigger a liquidation.
 
-This is a protocol parameter that is set individually for each collateral type (with a minimum of `125%)`. So if your CLIP has a debt `10,000 LSDC`and the MCR for that collateral type is 125%, you would need at least `$12,500` worth of assets posted as collateral to avoid being liquidated.
+This is a protocol parameter that is set individually for each collateral type (with a minimum of `125%)`. So if your CLIP has a debt `10,000 LSDC` and the MCR for that collateral type is 125%, you would need at least `$12,500` worth of assets posted as collateral to avoid being liquidated.
 
-Note that asset prices can be quite volatile and if you are not monitoring your collateral ratio with a software agent, you need to leave some margin to account for collateral assets dropping in value when you can not respond in due time. In general, it is wise to be on the conservative side to avoid any liquidation scenario's.
+Note that asset prices can be quite volatile and if you are not monitoring your collateral ratio with a software agent, you need to leave some margin to account for collateral assets dropping in value when you can not respond in due time. In general, it is wise to be on the conservative side to avoid any liquidation scenarios.
 
 
 
 ### **What happens if my** CLIP **is liquidated?**
 
-You lose your collateral as your debt is paid off through [liquidation](https://docs.liquity.org/faq/stability-pool-and-liquidations#what-are-liquidations), i.e. you will no longer be able to retrieve your collateral by repaying your debt. A liquidation thus results in a net loss of `20% (= 100% * 25 / 125)` of your collateral’s Dollar value.
+You lose your collateral as your debt is paid off through [liquidation](/tenet-stablecoin-protocol/stability-pool-and-liquidations#what-are-liquidations), i.e. you will no longer be able to retrieve your collateral by repaying your debt. A liquidation thus results in a net loss of `20% (= 100% * 25 / 125)` of your collateral’s Dollar value at the time of liquidation.
 
 ### **What is the Liquidation Reserve?**
 
@@ -102,11 +96,11 @@ When you open a CLIP and draw a loan, `10 LSDC` is set aside as a way to compens
 
 ### **What happens if my** CLIP **is redeemed against?**
 
-When LSDC is redeemed, the assets provided to the redeemer are allocated from the CLIP(s) with the lowest collateral ratio (even if it is above `125%`). If at the time of redemption you have the CLIP with the lowest ratio, you will give up some of your collateral, but your debt will be reduced accordingly. &#x20;
+When LSDC is redeemed, the assets provided to the redeemer are allocated from the CLIP(s) with the lowest collateral ratio (even if it is above `125%`). If at the time of redemption you have the CLIP with the lowest ratio, you will give up some of your collateral, but your debt will be reduced accordingly. 
 
 The USD value by which your collateral is reduced corresponds to the nominal LSDC amount by which your CLIPs debt is decreased. You can think of redemptions as if somebody else is repaying your debt and retrieving an equivalent amount of your collateral. As a positive side effect, redemptions improve the collateral ratio of the affected CLIPs, making them less risky.
 
-Redemptions that do not reduce your debt to 0 are called partial redemptions, while redemptions that fully pay off a CLIPs debt are called full redemptions. In such a case, your CLIP is closed, and you can claim your collateral surplus and the Liquidation Reserve at any time.&#x20;
+Redemptions that do not reduce your debt to 0 are called partial redemptions, while redemptions that fully pay off a CLIPs debt are called full redemptions. In such a case, your CLIP is closed, and you can claim your collateral surplus and the Liquidation Reserve at any time.
 
 Let’s say you own a CLIP with `2 twstETH` collateralized and a debt of `3,000 LSDC`. The current price of twstETH is `$2,000`. This puts your collateral ratio (CR) at `133% (= 100% * (2 * 2,000) / 3,000)`. Let’s imagine this is the lowest CR in the Tenet Stablecoin system and look at two examples of a partial redemption and a full redemption:
 
@@ -124,9 +118,9 @@ By making liquidation instantaneous and more efficient, Tenet's Stablecoin Proto
 
 ### **How can I take advantage of leverage?**
 
-You can sell the borrowed LSDC on the market for accepted collateral and use the latter to top up the collateral of your CLIP. That allows you to draw and sell more LSDC, and by repeating the process you can reach the desired leverage ratio.&#x20;
+You can sell the borrowed LSDC on the market for accepted collateral and use the latter to top up the collateral of your CLIP. That allows you to draw and sell more LSDC, and by repeating the process you can reach the desired leverage ratio.
 
-Assuming perfect price stability (`1 LSDC = $1`), the maximum achievable leverage ratio is 5`x`. It is given by the formula:&#x20;
+Assuming perfect price stability (`1 LSDC = $1`), the maximum achievable leverage ratio is 5`x`. It is given by the formula:
 
 maximum leverage ratio =$$\frac{MCR}{(MCR - 100\%)}$$where MCR is the Minimum Collateral Ratio.
 

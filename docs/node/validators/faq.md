@@ -15,8 +15,7 @@ Check the FAQ for running a validator on Tenet.
 Tenet is powered by [Tendermint](https://docs.tendermint.com/v0.34/introduction/what-is-tendermint.html) Core,
 which relies on a set of validators to secure the network. Validators run a full node and participate in consensus
 by broadcasting votes which contain cryptographic signatures signed by their private key. Validators commit new
-blocks in the blockchain and receive revenue in exchange for their work. They also participate in on-protocol
-treasury governance by voting on governance proposals. A validator's voting influence is weighted according to
+blocks in the blockchain and receive revenue in exchange for their work. They also participate in on-protocol governance by voting on governance proposals. A validator's voting influence is weighted according to
 their total stake.
 
 </details>
@@ -26,16 +25,16 @@ their total stake.
 <summary><b>What is "staking"?</b></summary>
 
 Tenet is a public Proof-of-Stake (PoS) blockchain, meaning that validator's weight is determined by the amount of
-staking tokens (TENET) bonded as collateral. These staking tokens can be staked directly by the validator or delegated
-to them by TENET holders.
+staking tokens (TENET and other LSDs) bonded as collateral. These staking tokens can be staked directly by the validator or delegated
+to them by TENET/LSD holders.
 
 Any user in the system can declare its intention to become a validator by sending a `create-validator` transaction.
 From there, they become validators.
 
 The weight (i.e. total stake or voting power) of a validator determines wether or not it is an active validator,
 and also how frequently this node will have to propose a block and how much revenue it will obtain. Initially, only
-the top 150 validators with the most weight will be active validators. If validators double-sign, or are frequently
-offline, they risk their staked tokens (including TENET delegated by users) being "slashed" by the protocol to
+the top 64 validators with the most weight will be active validators. If validators double-sign, or are frequently
+offline, they risk their staked tokens (including TENET/LSDs delegated by users) being "slashed" by the protocol to
 penalize negligence and misbehavior.
 
 </details>
@@ -57,8 +56,8 @@ Of course, it is possible and encouraged for any user to run full nodes even if 
 
 <summary><b>What is a delegator?</b></summary>
 
-Delegators are TENET holders who cannot, or do not want to run validator operations themselves. Users can delegate
-TENET to a validator and obtain a part of its revenue in exchange (for more detail on how revenue is distributed, see
+Delegators are TENET/LSD holders who cannot, or do not want to run validator operations themselves. Users can delegate
+TENET/LSDs to a validator and obtain a part of its revenue in exchange (for more detail on how revenue is distributed, see
 `What is the incentive to stake?` and `What is a validator's commission?` sections below).
 
 Because they share revenue with their validators, delegators also share responsibility. Should a validator misbehave,
@@ -119,12 +118,12 @@ keying backend. Doing so might result in a loss of funds by making your funds re
 Ref: [Security Advisory: Insecurely configured geth can make funds remotely accessible](https://blog.ethereum.org/2015/08/29/security-alert-insecurely-configured-geth-can-make-funds-remotely-accessible/)
 :::
 
-Once a validator is created and registered, TENET holders can delegate TENET to it, effectively adding stake to
-its pool. The total stake of a validator is the sum of the TENET self-bonded by the validator's operator and the
-TENET bonded by external delegators.
+Once a validator is created and registered, TENET/LSD holders can delegate TENET/LSDs to it, effectively adding stake to
+its pool. The total stake of a validator is the sum of the TENET/LSDs self-bonded by the validator's operator and the
+TENET/LSDs bonded by external delegators.
 
-**Only the top 150 validators with the most stake are considered the active validators**, becoming
-**bonded validators**. If ever a validator's total stake dips below the top 150, the validator loses
+**Only the top 64 validators with the most stake are considered the active validators**, becoming
+**bonded validators**. If ever a validator's total stake dips below the top 64, the validator loses
 its validator privileges (meaning that it won't generate rewards) and no longer serves as part of
 the active set (i.e doesn't participate in consensus), entering **unbonding mode** and eventually becomes **unbonded**.
 
@@ -169,13 +168,13 @@ After a validator is created with a `create-validator` transaction, it can be in
   validator does not send a `rebond` transaction while in `unbonding` mode, it will take two weeks for the state
   transition to complete.
 - `unbonded`: Validator is not in the active set, and therefore not signing blocks. Unbonded validators cannot be
-  slashed, but do not earn any rewards from their operation. It is still possible to delegate TENET to this
+  slashed, but do not earn any rewards from their operation. It is still possible to delegate TENET/LSDs to this
   validator. Un-delegating from an `unbonded` validator is immediate.
 
 Delegators have the same state as their validator.
 
 :::warning
-Delegations are not necessarily bonded. TENET can be delegated and bonded, delegated and unbonding, delegated and
+Delegations are not necessarily bonded. TENET/LSDs can be delegated and bonded, delegated and unbonding, delegated and
 unbonded, or liquid.
 :::
 
@@ -185,8 +184,8 @@ unbonded, or liquid.
 
 <summary><b>What is "self-bond"? How can I increase my "self-bond"?</b></summary>
 
-The validator operator's "self-bond" refers to the amount of TENET stake delegated to itself. You can increase your
-self-bond by delegating more TENET to your validator account.
+The validator operator's "self-bond" refers to the amount of TENET/LSDs stake delegated to itself. You can increase your
+self-bond by delegating more TENET/LSDs to your validator account.
 
 </details>
 
@@ -200,9 +199,9 @@ If you want to obtain coins for the testnet, you can do so by using the [faucet]
 
 <details>
 
-<summary><b>Is there a minimum amount of TENET that must be staked to be an active (bonded) validator?</b></summary>
+<summary><b>Is there a minimum amount of TENET/LSDs that must be staked to be an active (bonded) validator?</b></summary>
 
-There is no minimum. The top 150 validators with the highest total stake (where
+There is no minimum. The top 64 validators with the highest total stake (where
 `total stake = self-bonded stake + delegators stake`) are the active validators.
 
 </details>
@@ -214,12 +213,12 @@ There is no minimum. The top 150 validators with the highest total stake (where
 Delegators are free to choose validators according to their own subjective criteria. That said, criteria anticipated to
 be important include:
 
-- **Amount of self-bonded TENET:** Number of TENET a validator self-bonded to its staking pool. A validator with higher
-  amount of self-bonded TENET has more skin in the game, making it more liable for its actions.
+- **Amount of self-bonded TENET/LSDs:** Number of TENET/LSDs a validator self-bonded to its staking pool. A validator with a higher
+  amount of self-bonded TENET/LSDs has more skin in the game, making it more liable for its actions.
 
-- **Amount of delegated TENET:** Total number of TENET delegated to a validator. A high stake shows that the community
+- **Amount of delegated TENET/LSDs:** Total number of TENET/LSDs delegated to a validator. A high stake shows that the community
   trusts this validator, but it also means that this validator is a bigger target for hackers. Validators are expected
-  to become less and less attractive as their amount of delegated TENET grows. Bigger validators also increase the
+  to become less and less attractive as their amount of delegated TENET/LSDs grows. Bigger validators also increase the
   centralization of the network.
 
 - **Commission rate:** Commission applied on revenue by validators before it is distributed to their delegators
@@ -270,23 +269,23 @@ current state of the ecosystem so that they can easily adapt to any change.
 
 <summary><b>What does staking imply?</b></summary>
 
-Staking TENET can be thought of as a safety deposit on validation activities. When a validator or a delegator wants to
+Staking TENET/LSDs can be thought of as a safety deposit on validation activities. When a validator or a delegator wants to
 retrieve part or all of their deposit, they send an unbonding transaction. Then, the deposit undergoes a *two week
 unbonding period* during which they are liable to being slashed for potential misbehavior committed by the validator
 before the unbonding process started.
 
 Validators, and by association delegators, receive block provisions, block rewards, and fee rewards. If a validator
 misbehaves, a certain portion of its total stake is slashed (the severity of the penalty depends on the type
-of misbehavior). This means that every user that bonded TENET to this validator gets penalized in proportion
+of misbehavior). This means that every user that bonded TENET/LSDs to this validator gets penalized in proportion
 to its stake. Delegators are therefore incentivized to delegate to validators that they anticipate will function safely.
 
 </details>
 <details>
 
-<summary><b>Can a validator run away with its delegators' TENET?</b></summary>
+<summary><b>Can a validator run away with its delegators' TENET/LSDs?</b></summary>
 
 By delegating to a validator, a user delegates staking power. The more staking power a validator has, the more weight
-it has in the consensus and processes. This does not mean that the validator has custody of its delegators' TENET.
+it has in the consensus and processes. This does not mean that the validator has custody of its delegators' TENET/LSDs.
 *By no means can a validator run away with its delegator's funds*.
 
 Even though delegated funds cannot be stolen by their validators, delegators are still liable if their validators
@@ -296,7 +295,7 @@ misbehave. In such case, each delegators' stake will be partially slashed in pro
 
 <details>
 
-<summary><b>How often will a validator be chosen to propose the next block? Does it go up with the quantity of TENET
+<summary><b>How often will a validator be chosen to propose the next block? Does it go up with the quantity of TENET/LSDs
 staked?</b></summary>
 
 The validator that is selected to mine the next block is called the **proposer**, the "leader" in the consensus for the
@@ -320,9 +319,8 @@ Each member of a validator's staking pool earns different types of revenue:
 
 - **Block rewards:** Native tokens of applications run by validators (e.g. TENET on Tenet) are inflated to produce
   block provisions. These provisions exist to incentivize TENET holders to bond their stake, as non-bonded TENET will
-  be diluted over time.
-- **Transaction fees:** Tenet maintains a whitelist of token that are accepted as fee payment. The initial fee token is
-  the `tenet`.
+  be diluted over time. It also incentivizes LSD holders to bond to Tenet, in order to increase their yield.
+- **Transaction fees:** Tenet maintains a whitelist of token that are accepted as fee payment. The initial fee token is `tenet`.
 
 This total revenue is divided among validators' staking pools according to each validator's weight. Then, within each
 validator's staking pool the revenue is divided among delegators in proportion to each delegator's stake. A commission
@@ -362,7 +360,7 @@ This means that even though each validator gains TENET with each provision, all 
 weight.
 
 Let us take an example where we have 10 validators with equal staking power and a commission rate of 1%. Let us also
-assume that the provision for a block is 1000 TENET and that each validator has 20% of self-bonded TENET. These tokens
+assume that the provision for a block is 1000 TENET and that each validator has 20% of self-bonded TENET/LSD weight. These tokens
 do not go directly to the proposer. Instead, they are evenly spread among validators. So now each validator's pool
 has 100 TENET. These 100 TENET will be distributed according to each participant's stake:
 
@@ -380,39 +378,7 @@ distributed according to the same mechanism.
 
 <summary><b>How are fees distributed?</b></summary>
 
-Fees are similarly distributed with the exception that the block proposer can get a bonus on the fees of the block it
-proposes if it includes more than the strict minimum of required precommits.
-
-When a validator is selected to propose the next block, it must include at least ⅔ precommits for the previous block in
-the form of validator signatures. However, there is an incentive to include more than ⅔ precommits in the form of a
-bonus. The bonus is linear: it ranges from 1% if the proposer includes ⅔rd precommits (minimum for the block to be
-valid) to 5% if the proposer includes 100% precommits. Of course the proposer should not wait too long or other
-validators may timeout and move on to the next proposer. As such, validators have to find a balance between
-wait-time to get the most signatures and risk of losing out on proposing the next block. This mechanism aims
-to incentivize non-empty block proposals, better networking between validators as well as to mitigate censorship.
-
-Let's take a concrete example to illustrate the aforementioned concept. In this example, there are 10 validators with
-equal stake. Each of them applies a 1% commission and has 20% of self-bonded TENET. Now comes a successful block
-that collects a total of 1005 TENET in fees. Let's assume that the proposer included 100% of the signatures in its
-block. It thus obtains the full bonus of 5%.
-
-We have to solve this simple equation to find the reward $R$ for each validator:
-
-$$9R ~ + ~ R ~ + ~ 5\%(R) ~ = ~ 1005 ~ \Leftrightarrow ~ R ~ = ~ 1005 ~/ ~10.05 ~ = ~ 100$$
-
-- For the proposer validator:
-
-    - The pool obtains $R ~ + ~ 5\%(R)$: 105 TENET
-    - Commission: $105 ~ *~ 80\% ~* ~ 1\%$ = 0.84 TENET
-    - Validator's reward: $105 ~ * ~ 20\% ~ + ~ Commission$ = 21.84 TENET
-    - Delegators' rewards: $105 ~ * ~ 80\% ~ - ~ Commission$ = 83.16 TENET \(each delegator will be able to claim its portion
-      of these rewards in proportion to their stake\)
-
-    - The pool obtains $R$: 100 TENET
-    - Commission: $100 ~ *~ 80\% ~* ~ 1\%$ = 0.8 TENET
-    - Validator's reward: $100 ~ * ~ 20\% ~ + ~ Commission$ = 20.8 TENET
-    - Delegators' rewards: $100 ~ * ~ 80\% ~ - ~ Commission$ = 79.2 TENET \(each delegator will be able to claim its portion
-      of these rewards in proportion to their stake\
+Fees are distributed 50% to the active validator set and 50% to veTenet holders.
 
 </details>
 
@@ -452,17 +418,17 @@ to help out.
 
 <details>
 
-<summary><b>Do validators need to self-bond TENET?</b></summary>
+<summary><b>Do validators need to self-bond TENET/LSDs?</b></summary>
 
 No, they do not. A validators total stake is equal to the sum of its own self-bonded stake and of its delegated stake.
 This means that a validator can compensate its low amount of self-bonded stake by attracting more delegators. This is
 why reputation is very important for validators.
 
-Even though there is no obligation for validators to self-bond TENET, delegators should want their validator to have
-self-bonded TENET in their staking pool. In other words, validators should have skin-in-the-game.
+Even though there is no obligation for validators to self-bond TENET/LSDs, delegators should want their validator to have
+self-bonded TENET/LSDs in their staking pool. In other words, validators should have skin-in-the-game.
 
 In order for delegators to have some guarantee about how much skin-in-the-game their validator has, the latter can signal
-a minimum amount of self-bonded TENET. If a validator's self-bond goes below the limit that it predefined, this
+a minimum amount of self-bonded TENET/LSDs. If a validator's self-bond goes below the limit that it predefined, this
 validator and all of its delegators will unbond.
 
 </details>
@@ -500,7 +466,7 @@ use increases. Participating in the testnet is the best way to learn more.
 
 <summary><b>What are software requirements?</b></summary>
 
-In addition to running an Tenet node, validators should develop monitoring, alerting and management solutions.
+In addition to running a Tenet node, validators should develop monitoring, alerting and management solutions.
 
 </details>
 

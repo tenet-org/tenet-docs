@@ -2,9 +2,9 @@
 sidebar_position: 1
 ---
 
-# Diversified PoS — TENET
+# Diversified PoS — Tenet
 
-Proof of Stake is now cemented as the preferred consensus model for new blockchain adopters. The reduced fees and increased scalability it brings enable powerful smart contract economies. As a bonus, its low carbon impact appeals to corporations and media, which boost odds of accelerated mainstream adoption.
+Proof of Stake is now cemented as the preferred consensus model for new blockchain adopters. The reduced fees and increased scalability it brings enable powerful smart contract economies. As a bonus, its low carbon impact appeals to corporations and mass media, which boost the odds of accelerated mainstream adoption.
 
 There has been, however, little innovation in Proof of Stake models.
 

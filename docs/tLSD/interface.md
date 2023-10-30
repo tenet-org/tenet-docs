@@ -6,14 +6,14 @@ sidebar_position: 2
 
 ## Overview
 
-The ITLSDFactory is an interface that defines a set of functions for issuing and managing TLSD 
+The ITLSDFactory is an interface that defines a set of functions for issuing and managing validator specific tLSD 
 (Tenet Liquidity Staking Derivative) tokens. 
 
-TLSD tokens represent a tokenized representation of staked assets, 
+tLSD tokens represent a tokenized representation of staked assets, 
 which can be issued and burned by validators. 
 
-This interface provides methods for issuing TLSD tokens against both ERC20 
-assets and native assets, as well as for burning TLSD tokens to retrieve the underlying assets.
+This interface provides methods for issuing tLSD tokens against both TEN20 
+assets and the native asset, as well as for burning validator specific tLSD tokens to retrieve the underlying assets.
 
 ## Interface
 

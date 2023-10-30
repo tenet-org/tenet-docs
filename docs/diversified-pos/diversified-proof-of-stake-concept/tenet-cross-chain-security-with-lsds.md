@@ -10,20 +10,20 @@ $$
 
 
 
-For instance, if the TENET chain has native staking asset, A, and two other chains have staking assets, B and C, then the security of the TENET chain can be expressed as:
+For instance, if the Tenet network has a native staking asset, A, and two other chains have staking assets, B and C, which are also staked to Tenet, then the security of the Tenet network can be expressed as:
 
 $$Security_{A} = StakedA$$
 
 
 
-When LSDs representing staked B and C are added to the TENET chain, the new security value is:
+When LSDs representing staked B and C are added to the Tenet network, the new security value is:
 
 $$Security_{ABC} = StakedA + LSD_B + LSD_C$$
 
 
 
-Where LSD\_B and LSD\_C represent the value of the staked assets B and C, respectively.&#x20;
+Where LSD\_B and LSD\_C represent the value of the staked assets B and C, respectively.
 
 This allows the security of a chain to be strengthened by cross-chain collaboration, even if the participating chains are of varying sizes and security levels.
 
-The utilization of LSDs permits a more diverse and secure staking system, where the TENET chain can attain greater security and economic stability.
+The utilization of LSDs permits a more diverse and secure staking system, where the Tenet network can attain greater security and economic stability.
