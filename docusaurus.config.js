@@ -131,8 +131,7 @@ const config = {
       },
       footer: {
         style: 'dark',
-        links: [],
-        copyright: `Copyright © ${new Date().getFullYear()}. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()}. <a href="https://tenet.org">Tenet Protocol</a>.`,
       },
       prism: {
         theme: lightCodeTheme,
