@@ -19,7 +19,7 @@ function Home() {
                             <Card
                                 to="./diversified-pos"
                                 header={{
-                                    label: "Learn about DiPoS",
+                                    label: "📚 Learn about DiPoS",
                                 }}
                                 body={{
                                     label:
@@ -31,7 +31,7 @@ function Home() {
                             <Card
                                 to="./tokenomics"
                                 header={{
-                                    label: "Incentivisation",
+                                    label: "💼 Incentivisation",
                                 }}
                                 body={{
                                     label:
@@ -44,7 +44,7 @@ function Home() {
                             <Card
                                 to="./tenet-stablecoin-protocol"
                                 header={{
-                                    label: "Native Stablecoin",
+                                    label: "💲 Native Stablecoin",
                                 }}
                                 body={{
                                     label:
@@ -56,7 +56,7 @@ function Home() {
                             <Card
                                 to="./node/tutorials/running-node"
                                 header={{
-                                    label: "Launch Your Tenet Node",
+                                    label: "🚀 Launch Your Tenet Node",
                                 }}
                                 body={{
                                     label:
@@ -67,7 +67,7 @@ function Home() {
                             <Card
                                 to="./node/category/validation"
                                 header={{
-                                    label: "Become a Validator",
+                                    label: "😎 Become a Validator",
                                 }}
                                 body={{
                                     label:
@@ -79,7 +79,7 @@ function Home() {
                             <Card
                                 to="./node/tutorials/deploy-contract"
                                 header={{
-                                    label: "Launch dApp on Tenet",
+                                    label: "🛠️ Launch dApp on Tenet",
                                 }}
                                 body={{
                                     label:
