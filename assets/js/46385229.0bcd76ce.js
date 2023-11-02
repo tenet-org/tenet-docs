@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktenet_docs=self.webpackChunktenet_docs||[]).push([[1884],{4301:e=>{e.exports=JSON.parse('{"title":"API","slug":"/category/api","permalink":"/node/category/api","navigation":{"previous":{"title":"Alliance Staking Contract","permalink":"/node/precompiles/alliance-staking"},"next":{"title":"Ethereum JSON-RPC","permalink":"/node/api/evm/"}}}')}}]);
