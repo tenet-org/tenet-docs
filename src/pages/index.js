@@ -23,7 +23,7 @@ function Home() {
                                 }}
                                 body={{
                                     label:
-                                        "Tenet allows LSDs from other networks to be restated to Tenet " +
+                                        "Tenet allows LSDs from other networks to be restaked to Tenet " +
                                         "in order to secure the network and participate in governance.",
                                 }}
                             />
