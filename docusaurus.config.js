@@ -99,8 +99,13 @@ const config = {
         items: [
           {
             position: 'left',
-            label: 'Node',
-            to: '/node',
+            label: 'Diversified POS',
+            to: '/diversified-pos',
+          },
+          {
+            position: 'left',
+            label: 'Tokenomics',
+            to: '/tokenomics',
           },
           {
             position: 'left',
@@ -109,18 +114,13 @@ const config = {
           },
           {
             position: 'left',
-            label: 'Diversified POS',
-            to: '/diversified-pos',
-          },
-          {
-            position: 'left',
             label: 'Stablecoin',
             to: '/tenet-stablecoin-protocol',
           },
           {
             position: 'left',
-            label: 'Tokenomics',
-            to: '/tokenomics',
+            label: 'Node',
+            to: '/node',
           },
           {
             href: 'https://github.com/tenet-org',
