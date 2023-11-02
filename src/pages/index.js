@@ -15,10 +15,48 @@ function Home() {
                 <section className={styles.features}>
                     <div className="container">
                         <div className="row cards__container">
+
+                            <Card
+                                to="./diversified-pos"
+                                header={{
+                                    label: "Learn about DiPoS",
+                                }}
+                                body={{
+                                    label:
+                                        "Tenet allows LSDs from other networks to be restated to Tenet " +
+                                        "in order to secure the network and participate in governance.",
+                                }}
+                            />
+
+                            <Card
+                                to="./tokenomics"
+                                header={{
+                                    label: "Incentivisation",
+                                }}
+                                body={{
+                                    label:
+                                        "Tenet utilises veTenet and native gauges in order to distribute " +
+                                        "incentives across the entire Tenet ecosystem. Learn more about our " +
+                                        "innovative tokenomics.",
+                                }}
+                            />
+
+                            <Card
+                                to="./tenet-stablecoin-protocol"
+                                header={{
+                                    label: "Native Stablecoin",
+                                }}
+                                body={{
+                                    label:
+                                        "Learn more about Tenet’s native stablecoin LSDC - an over collateralised " +
+                                        "stablecoin backed by yield bearing assets and governed by collateral providers.",
+                                }}
+                            />
+
                             <Card
                                 to="./node/tutorials/running-node"
                                 header={{
-                                    label: "🚀 Launch Your Local Node",
+                                    label: "Launch Your Tenet Node",
                                 }}
                                 body={{
                                     label:
@@ -27,20 +65,9 @@ function Home() {
                             />
 
                             <Card
-                                to="./tLSD"
-                                header={{
-                                    label: "☄️ Learn about tLSD",
-                                }}
-                                body={{
-                                    label:
-                                        "The TLSDFactory contract is a Solidity smart contract that facilitates the issuance and management of TLSD (Tenet Liquid Staking Derivative) tokens on the Tenet Blockchain.",
-                                }}
-                            />
-
-                            <Card
                                 to="./node/category/validation"
                                 header={{
-                                    label: "😎 Become a Validator",
+                                    label: "Become a Validator",
                                 }}
                                 body={{
                                     label:
@@ -48,21 +75,11 @@ function Home() {
                                 }}
                             />
 
-                            <Card
-                                to="./node/category/api"
-                                header={{
-                                    label: "💻 View Tenet APIs",
-                                }}
-                                body={{
-                                    label:
-                                        "Access low-level protocol interfaces to build your custom dapp",
-                                }}
-                            />
 
                             <Card
                                 to="./node/tutorials/deploy-contract"
                                 header={{
-                                    label: "🛠️ Launch dApp on Tenet",
+                                    label: "Launch dApp on Tenet",
                                 }}
                                 body={{
                                     label:
@@ -70,16 +87,6 @@ function Home() {
                                 }}
                             />
 
-                            <Card
-                                to="https://github.com/tenet-org"
-                                header={{
-                                    label: "🛠️ Contribute to Tenet",
-                                }}
-                                body={{
-                                    label:
-                                        "Contribute to the thriving ecosystem of Tenet and its open-source initiatives",
-                                }}
-                            />
                         </div>
                     </div>
                 </section>
