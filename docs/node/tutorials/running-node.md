@@ -28,7 +28,7 @@ Download binary from the [v11.0.7 release](https://github.com/tenet-org/tenet-ma
 
 ```bash
 wget -O tenet.tar.gz https://github.com/tenet-org/tenet-mainnet/releases/download/v11.0.7/tenet-mainnet_11.0.7_$(uname -s)_$(arch).tar.gz
-tar xf tenet.tar.gz bin/tenetd && mv bin/tenetd tenetd && rm -rf bin
+tar xf tenet.tar.gz bin/tenetd && mv bin/tenetd tenetd && rm -r bin
 ```
 
 :::tip
