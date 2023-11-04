@@ -26,11 +26,6 @@ git clone https://github.com/tenet-org/tenet-mainnet.git ~/.tenetd
 
 Download binary from the [v11.0.7 release](https://github.com/tenet-org/tenet-mainnet/releases/tag/v11.0.7). Extract archive.
 
-```bash
-wget -O tenet.tar.gz https://github.com/tenet-org/tenet-mainnet/releases/download/v11.0.7/tenet-mainnet_11.0.7_$(uname -s)_$(arch).tar.gz
-tar xf tenet.tar.gz bin/tenetd && mv bin/tenetd tenetd && rm -r bin
-```
-
 :::tip
 If you want to sync your node from snapshot: enable ```statesync``` in `~/.tenetd/config/config.toml` and **replace binary with the [latest release](https://github.com/tenet-org/tenet-mainnet/releases/latest)**.
 
@@ -39,10 +34,7 @@ Note that you should do it before first start, otherwise you will need to delete
 
 ### 3. Install cosmovisor
 
-```bash
-wget -O cosmovisor.tar.gz https://github.com/tenet-org/cosmovisor/releases/download/cosmovisor%2Fv1.6.0/cosmovisor-v1.6.0-$(uname -s | tr '[:upper:]' '[:lower:]')_$(arch | tr '[:upper:]' '[:lower:]').tar.gz
-tar xf cosmovisor.tar.gz cosmovisor
-```
+Download binary from the [v1.6.0 release](https://github.com/tenet-org/cosmovisor/releases/tag/cosmovisor%2Fv1.6.0). Extract archive.
 
 ### 4. Setup cosmovisor
 
@@ -53,7 +45,7 @@ export DAEMON_RESTART_AFTER_UPGRADE=true
 ```
 
 ```
-./cosmovisor init ./tenetd
+./cosmovisor init ./bin/tenetd
 ```
 
 ### 5. Start and sync node
