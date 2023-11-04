@@ -59,7 +59,7 @@ export DAEMON_RESTART_AFTER_UPGRADE=true
 Your node consensus public key (tenetvalconspub...) can be used to create a new validator by staking atenet tokens. You can find your validator pubkey by running:
 
 ```bash
-./tented tendermint show-validator
+./tenetd tendermint show-validator
 ```
 
 You can generate an account for validator by running:
@@ -83,7 +83,7 @@ To create your validator on mainnet, just use the following command:
   --min-self-delegation="1000000" \
   --gas="auto" \
   --gas-prices="20000000000atenet" \
-  --gas-adjustment=1.5
+  --gas-adjustment=1.5 \
   --from=my_val_key
 ```
 
@@ -96,12 +96,12 @@ The <key_name> specifies which validator you are editing. If you choose to not i
 The `--identity` can be used as to verify identity with systems like Keybase or UPort. When using Keybase, `--identity` should be populated with a 16-digit string that is generated with a [keybase.io](https://keybase.io) account. It's a cryptographically secure method of verifying your identity across multiple online networks. The Keybase API allows us to retrieve your Keybase avatar. This is how you can add a logo to your validator profile.
 
 ```bash
-./tenetd tx staking edit-validator
+./tenetd tx staking edit-validator \
   --moniker="choose a moniker" \
   --website="https://cosmos.network" \
   --identity=6A0D65E29A4CBC8E \
   --details="To infinity and beyond!" \
-  --chain-id=<chain_id> \
+  --chain-id="tenet_1559-1" \
   --gas="auto" \
   --gas-prices="0.0025atenet" \
   --from=<key_name> \
