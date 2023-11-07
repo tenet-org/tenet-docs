@@ -16,6 +16,13 @@ struct Coin {
     uint256 amount;
 }
 
+struct AllianceDelegation {
+    address delegator;
+    address validator;
+    address asset;
+    uint256 amount;
+}
+
 /*
     @title AllianceStaking Interface
     @dev This interface facilitates interaction with the Alliance Module in the cosmos-sdk by providing staking-related functions.
@@ -34,6 +41,59 @@ interface AllianceStaking {
         address _token
     ) external view returns (uint256 amount);
 
+    /**
+        @dev Get list of delegations
+        @param _delegator The address of the delegator.
+        @param _asset The address of the ERC20 token being queried.
+        @param _page The page number (starting from 1)
+        @param _perPage The number of items per page
+        @return The list of delegations
+    */
+    function delegations(
+        address _delegator,
+        address _asset,
+        uint8 _page,
+        uint8 _perPage
+    )
+    external
+    view
+    returns (AllianceDelegation[] memory list, uint256 totalCount);
+
+    /**
+        @dev Get total delegation amount of a specific token in all validators.
+        @param _delegator The address of the delegator.
+        @param _token The address of the ERC20 token being queried.
+        @return The amount of tokens delegated by the specified delegator to all validators.
+    */
+    function totalDelegation(
+        address _delegator,
+        address _token
+    ) external view returns (uint256 amount);
+
+    /**
+        @dev Get total delegation amount of a specific token in given validator.
+        @param _validator The address of the validator.
+        @param _token The address of the ERC20 token being queried.
+        @return The amount of tokens delegated to given validator.
+    */
+    function validatorStake(
+        address _validator,
+        address _token
+    ) external view returns (uint256 amount);
+
+    /**
+        @dev Get total delegation amount of a specific token in all validators.
+        @param _token The address of the ERC20 token being queried.
+        @return The amount of tokens delegated to all validators.
+    */
+    function totalStake(address _token) external view returns (uint256 amount);
+
+    /**
+        @dev Get total minted basecoins by alliance module
+        @return The amount of tokens minted by alliance module.
+    */
+    function mintedBasecoins() external view returns (uint256 amount);
+    
     /**
         @dev Delegate a specific amount of tokens to a validator on behalf of the caller.
         @param _validator The address of the target validator.

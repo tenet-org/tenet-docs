@@ -16,6 +16,19 @@ struct Coin {
     uint256 amount;
 }
 
+struct Validator {
+    address addr;
+    uint256 stake;
+    uint256 commission;
+    bool present;
+}
+
+struct Delegation {
+    address delegator;
+    address validator;
+    uint256 amount;
+}
+
 /*
     @title Staking Interface
     @dev This interface facilitates interaction with the Staking Module in the cosmos-sdk by providing staking-related functions.
@@ -32,6 +45,49 @@ interface Staking {
         address _delegator
     ) external view returns (uint256 amount);
 
+    /**
+        @dev Get the list of delegations made by a delegator.
+        @param _delegator The address of the delegator.
+        @param _page The page number of the delegation list (starting from 1).
+        @param _perPage The number of delegations per page.
+        @return The list of delegations made by the specified delegator.
+    */
+    function delegations(
+        address _delegator,
+        uint8 _page,
+        uint8 _perPage
+    ) external view returns (Delegation[] memory list, uint256 totalCount);
+
+    /**
+        @dev Get total delegated amount by a delegator.
+        @param _delegator The address of the delegator.
+        @return The total amount of tokens delegated by the specified delegator.
+    */
+    function totalDelegation(
+        address _delegator
+    ) external view returns (uint256 amount);
+
+    /**
+        @dev Get total stake of the validator.
+        @param _validator The address of the target validator.
+        @return The total stake of the given validator.
+    */
+    function validatorStake(
+        address _validator
+    ) external view returns (uint256 amount);
+
+    /**
+        @dev Get total stake of the network.
+        @return The total stake of the network.
+    */
+    function totalStake() external view returns (uint256 amount);
+    
+    /**
+        @dev Get the list of validators.
+        @return The list of validators.
+    */
+    function validators() external view returns (Validator[] memory list);
+    
     /**
         @dev Get total signed blocks count by a validator.
         @param _validator The address of the target validator.
