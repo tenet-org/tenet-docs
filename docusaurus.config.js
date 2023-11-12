@@ -31,6 +31,8 @@ const SECTIONS = [
   defineSection('diversified-pos'),
   defineSection('tenet-stablecoin-protocol'),
   defineSection('tokenomics'),
+  defineSection('oracle'),
+  defineSection('bridge'),
 ];
 
 /** @type {import('@docusaurus/types').Config} */
@@ -121,6 +123,16 @@ const config = {
             position: 'left',
             label: 'Node',
             to: '/node',
+          },
+          {
+            position: 'left',
+            label: 'Oracle',
+            to: '/oracle',
+          },
+          {
+            position: 'left',
+            label: 'Bridge',
+            to: '/bridge',
           },
           {
             href: 'https://github.com/tenet-org',
