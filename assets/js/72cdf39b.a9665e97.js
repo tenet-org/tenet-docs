@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktenet_docs=self.webpackChunktenet_docs||[]).push([[4559],{3849:e=>{e.exports=JSON.parse('{"name":"docusaurus-plugin-content-docs","id":"oracle"}')}}]);
