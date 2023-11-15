@@ -21,20 +21,6 @@ Tenet Oracle's Verifiable Random Function (VRF) is a game-changer, especially in
 - **Gaming and Gambling:** Ensuring fairness and unpredictability in games and gambling applications.
 - **NFTs:** Randomly assigning attributes or selecting winners in NFT-related applications.
 
-## Tenet Oracle Keepers
-
-Tenet Oracle Keepers are a powerful feature designed to enhance the automation capabilities of smart contracts.
-
-### Automated Smart Contract Execution
-
-- **Reliable Automation:** Keepers automate key functions of smart contracts, like triggering actions at predetermined conditions or times.
-- **Reduced Operational Overhead:** They reduce the need for manual interventions, thereby enhancing efficiency and reliability.
-
-### Use Cases
-
-- **Decentralized Finance (DeFi):** Automated interest payments, liquidations, and other time-sensitive functions.
-- **Regular Maintenance:** Routine checks and balances in smart contract ecosystems.
-
 ## External Adapters
 
 External Adapters in Tenet Oracle open a world of possibilities, allowing smart contracts to interact with external data sources and APIs.
