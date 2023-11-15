@@ -1,34 +1,26 @@
 ---
 sidebar_position: 1
-title: Introduction to Chainlink
+title: Introduction to Tenet Oracle
 ---
 
-# Welcome to Chainlink
+# Welcome to Tenet Oracle
 
-Welcome to the world of Chainlink, a pivotal innovation in the blockchain landscape that bridges the gap between smart contracts and real-world data. Chainlink is not just a technology; it's a key enabler in the evolution of blockchain applications.
+Tenet Oracle in its first instance is based upon the Chainlink oracle codebase with certain changes necessary for utilisation in Tenet's native products, including the calculation of price feeds for tLSD assets based on the price feed for an underlying LSD asset. 
 
-## What is Chainlink?
+In these docs we will cover the base Chainlink oracle implementastion as well as the changes implemented for the Tenet Oracle solution. Chainlink oracle was a pivotal innovation in the blockchain landscape that bridged the gap between smart contracts and real-world data. Tenet Oracle takes this concept to the next level for utilisation within Tenet's LSDfi ecosystem.
 
-Chainlink is a decentralized oracle network, a critical layer in blockchain infrastructure that provides reliable, tamper-proof inputs and outputs for complex smart contracts on any blockchain. It extends the functionality of blockchains by enabling access to real-world data and off-chain computation in a secure and scalable manner.
+## What is Tenet Oracle?
 
-## The Core Principles of Chainlink
-
-- **Decentralization:** At its heart, Chainlink is decentralized. It employs multiple oracles to avoid any single point of failure in data reporting.
-- **Security:** Leveraging cutting-edge cryptographic techniques, Chainlink ensures the highest level of data integrity and security.
-- **Flexibility:** Chainlink is designed to be blockchain-agnostic, functioning across multiple blockchains seamlessly.
+Tenet Oracle is a decentralized oracle network, a critical layer in Tenet's LSDfi infrastructure that provides reliable, tamper-proof inputs and outputs for complex smart contracts on Tenet. It extends the functionality of Chainlink to Tenet network and the LSDfi ecosystem built on top of it.
 
 ## Key Features
 
-- **Reliable Data Feeds:** Chainlink provides a network of decentralized oracles that supply accurate and real-time data from various sources.
+- **Reliable Data Feeds:** Tenet Oracle provides a network of decentralized oracles that supply accurate and real-time data from various sources.
 - **Seamless Connectivity:** It connects smart contracts with off-chain data and services, expanding their potential far beyond on-chain capabilities.
-- **Proven Node Operators:** Chainlink's network consists of high-quality, security-reviewed node operators, ensuring trustworthy data delivery.
-
-## Expanding the Smart Contract Universe
-
-Chainlink transforms the scope of smart contracts by enabling access to real-world data, events, payments, and more, paving the way for more functional, efficient, and applicable blockchain applications in finance, insurance, supply chain, and numerous other sectors.
+- **Proven Node Operators:** Tenet Oracle will utilise a subset of Tenet's professional validator network, including existing Chainlink Node Operators, to ensure high-quality and secure node operation and trustworthy data delivery.
 
 ## Getting Started
 
-Dive into the subsequent sections to understand Chainlink's architecture, how to integrate it into your projects, and explore its advanced features. Embark on this journey to unlock the full potential of smart contracts with Chainlink.
+Dive into the subsequent sections to understand Tenet Oracle's architecture, how to integrate it into your projects, and explore its advanced features. Embark on this journey to unlock the full potential of smart contracts with Tenet Oracle.
 
 
