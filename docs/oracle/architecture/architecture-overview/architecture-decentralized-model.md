@@ -1,11 +1,11 @@
 ---
 title: Decentralized Model
 ---
-This page describes how data aggregation is applied to produce Chainlink Data Feeds and provides more insight as to how Data Feeds are updated.
+This page describes how data aggregation is applied to produce Tenet Oracle Data Feeds and provides more insight as to how Data Feeds are updated.
 
 ## Data Aggregation
 
-Each data feed is updated by multiple, independent Chainlink oracle operators. The [AccessControlledOffchainAggregator](https://github.com/smartcontractkit/libocr/blob/master/contract/AccessControlledOffchainAggregator.sol) aggregates the data on-chain.
+Each data feed is updated by multiple, independent Tenet Oracle oracle operators. The [AccessControlledOffchainAggregator] aggregates the data on-chain.
 
 Off-Chain Reporting (OCR) further enhances the aggregation process.
 
@@ -15,7 +15,7 @@ Each data feed is built and funded by the community of users who rely on accurat
 
 ## Decentralized Oracle Network
 
-Each data feed is updated by a decentralized oracle network. Each oracle operator is rewarded for publishing data. The number of oracles contributing to each feed varies. In order for an update to take place, the data feed aggregator contract must receive responses from a minimum number of oracles or the latest answer will not be updated. You can see the minimum number of oracles for the corresponding feed at [data.chain.link](https://data.chain.link).
+Each data feed is updated by a decentralized oracle network. Each oracle operator is rewarded for publishing data. The number of oracles contributing to each feed varies. In order for an update to take place, the data feed aggregator contract must receive responses from a minimum number of oracles or the latest answer will not be updated. You can see the minimum number of oracles for the corresponding feed at [data.tenet.org](https://data.tenet.org).
 
 Each oracle in the set publishes data during an aggregation round. That data is validated and aggregated by a smart contract, which forms the feed's latest and trusted answer.
 
@@ -23,19 +23,19 @@ Each oracle in the set publishes data during an aggregation round. That data is 
 
 ### Consumer
 
-A Consumer contract is any contract that uses Chainlink Data Feeds to consume aggregated data. Consumer contracts must reference the correct [`AggregatorV3Interface`](https://github.com/smartcontractkit/chainlink/blob/master/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol) contract and call one of the exposed functions.
+A Consumer contract is any contract that uses Chainlink Data Feeds to consume aggregated data. Consumer contracts must reference the correct [`AggregatorV3Interface`] contract and call one of the exposed functions.
 
 ### Proxy
 
 Proxy contracts are on-chain proxies that point to the aggregator for a particular data feed. Using proxies enables the underlying aggregator to be upgraded without any service interruption to consuming contracts.
 
-Proxy contracts can vary from one data feed to another, but the [`AggregatorProxy.sol` contract](https://github.com/smartcontractkit/chainlink/blob/develop/contracts/src/v0.7/dev/AggregatorProxy.sol) on Github is a common example.
+Proxy contracts can vary from one data feed to another.
 
 ### Aggregator
 
 An aggregator is the contract that receives periodic data updates from the oracle network. Aggregators store aggregated data on-chain so that consumers can retrieve it and act upon it within the same transaction.
 
-You can access this data using the Data Feed address and the [`AggregatorV3Interface` contract](https://github.com/smartcontractkit/chainlink/blob/develop/contracts/src/v0.6/interfaces/AggregatorV3Interface.sol).
+You can access this data using the Data Feed address and the [`AggregatorV3Interface` contract].
 
 Aggregators receive updates from the oracle network only when the **Deviation Threshold** or **Heartbeat Threshold** triggers an update during an aggregation round. The first condition that is met triggers an update to the data.
 
