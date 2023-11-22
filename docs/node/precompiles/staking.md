@@ -98,6 +98,12 @@ interface Staking {
     ) external view returns (uint256 count);
 
     /**
+        @dev Get total signed blocks count by all validators.
+        @return The amount of blocks signed by all validators.
+    */
+    function totalSignedBlocks() external view returns (uint256 count);
+
+    /**
         @dev Get commission of validator.
         @param _validator The address of the target validator.
         @return Commission rate of the given validator (with 18 decimals).
