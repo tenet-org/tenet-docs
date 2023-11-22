@@ -58,7 +58,7 @@ An essential feature of the withdrawal process is the protection against drainin
 * `totalAssets`: Returns the total amount of LSD tokens managed by the aggregator contract.
 * `convertToShares`: Returns the amount of tLSD that the contract would exchange for the amount of LSD provided
 * `convertToAssets`: Returns the amount of LSD that the contract would exchange for the amount of tLSD provided
-* `MaxDeposit`, `MaxWithdraw`, `MaxMint`, `MaxRedeem`: Returns the maximum permissible transaction amounts.
+* `maxDeposit`, `maxWithdraw`, `maxMint`, `maxRedeem`: Returns the maximum permissible transaction amounts.
 
 ## Aggregator Staking Contract
 
@@ -78,7 +78,7 @@ The AggregatedTLSDStaking smart contract allows users to stake their tLSD tokens
 
 The wrapper contract is designed to simplify the user experience by automating the staking of tLSD tokens and yield compounding. Upon depositing tLSD tokens into the wrapper contract, users receive a yield-bearing token in return. The contract then automatically stakes these tLSD tokens and claims the generated yield on behalf of the user. Subsequently, this yield is reinvested to leverage the benefits of compound interest.
 1. **Deposit tLSD**: Once you deposit tLSD, the wrapper contract stakes them for you.
-2. **Receive wTLSD**: In return, you receive wTLSD tokens that are dual-yield-bearing and ready for DeFi.
+2. **Receive wtLSD**: In return, you receive wtLSD tokens that are dual-yield-bearing and ready for DeFi.
 
 ### Fee Structure
 
@@ -88,24 +88,24 @@ There are no deposit- or withdrawal-related fees.
 
 ### Interface
 
-* `deposit`: Mints wTLSD to the receiver by depositing an exact amount of tLSD tokens.
-* `withdraw`: Burns wTLSD from the owner and sends an exact amount of underlying tLSD to the receiver.
-* `mint`: Mints an exact amount of wTLSD to the receiver.
-* `redeem`: Burns an exact amount of wTLSD from the owner and sends tLSD tokens to the receiver.
+* `deposit`: Mints wtLSD to the receiver by depositing an exact amount of tLSD tokens.
+* `withdraw`: Burns wtLSD from the owner and sends an exact amount of underlying tLSD to the receiver.
+* `mint`: Mints an exact amount of wtLSD to the receiver.
+* `redeem`: Burns an exact amount of wtLSD from the owner and sends tLSD tokens to the receiver.
 * `remainingProfitUnlockTime`: Returns the remaining time until all profits from the last compound are unlocked.
 * `lockedProfit`: Returns the amount of locked profit from the last compound.
 * `totalAssets`: Returns the total amount of tLSD tokens managed by the aggregator contract.
-* `convertToShares`: Returns the amount of wTLSD that the contract would exchange for the amount of tLSD provided
-* `convertToAssets`: Returns the amount of tLSD that the contract would exchange for the amount of wTLSD provided
+* `convertToShares`: Returns the amount of wtLSD that the contract would exchange for the amount of tLSD provided
+* `convertToAssets`: Returns the amount of tLSD that the contract would exchange for the amount of wtLSD provided
 
 
-## How to Obtain wTLSD: A Step-by-Step Guide
+## How to Obtain wtLSD: A Step-by-Step Guide
 
 1. Transfer your LSD tokens to a compatible wallet (e.g., MetaMask, Eva).
 2. Ensure you have sufficient TENET tokens for transaction fees.
 3. Visit <*insert link*> and connect your wallet.
 4. Bridge your LSD tokens to the Tenet blockchain. The bridge to process this is accessible at <*insert link*>.
 5. Before proceeding, ensure that you are connected to the Tenet blockchain network.
-6. You can now delegate and wrap your LSD tokens to receive wTLSD tokens. To do this, navigate to <*insert link*> and use the 'delegate and wrap' function and confirm your transaction.
-7. All of your LSD tokens are now staked on Tenet and earning rewards on top op the yield from the original chain. You can now use your wTLSD tokens in DeFi applications.
+6. You can now delegate and wrap your LSD tokens to receive wtLSD tokens. To do this, navigate to <*insert link*> and use the 'delegate and wrap' function and confirm your transaction.
+7. All of your LSD tokens are now staked on Tenet and earning rewards on top op the yield from the original chain. You can now use your wtLSD tokens in DeFi applications.
 
